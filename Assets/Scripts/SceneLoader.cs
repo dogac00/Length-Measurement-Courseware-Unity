@@ -40,6 +40,16 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Scene7");
     }
 
+    public void LoadScene8()
+    {
+        SceneManager.LoadScene("Scene8");
+    }
+
+    public void LoadScene9()
+    {
+        SceneManager.LoadScene("Scene9");
+    }
+
     public void Quit()
     {
         Application.Quit();

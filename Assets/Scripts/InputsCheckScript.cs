@@ -13,6 +13,8 @@ public class InputsCheckScript : MonoBehaviour
     public GameObject tryAgain;
     public GameObject helpPanel;
 
+    public GameObject ruler;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,8 @@ public class InputsCheckScript : MonoBehaviour
 
     public void CheckValues()
     {
+        ruler.GetComponent<RulerScript>().SetAllUnactive();
+
         if (first.text == "5" && second.text == "8" && third.text == "11")
         {
             winningPanel.SetActive(true);

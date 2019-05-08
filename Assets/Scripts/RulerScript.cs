@@ -4,25 +4,54 @@ using UnityEngine;
 
 public class RulerScript : MonoBehaviour
 {
-    float firstTargetY = 2.0f;
-    float secondTargetY = -0.12f;
-    float thirdTargetY = -2.12f;
+    public GameObject Pointer5;
+    public GameObject Pointer8;
+    public GameObject Pointer11;
+
+    float firstTargetY = 0.64f;
+    float secondTargetY = -0.96f;
+    float thirdTargetY = -2.52f;
     float oldY = -3.6f;
+    private bool flag5, flag8, flag11;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        flag5 = false;
+        flag8 = false;
+        flag11 = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (flag5)
+        {
+            Pointer5.SetActive(true);
+        }
+        if (flag8)
+        {
+            Pointer8.SetActive(true);
+        }
+        if (flag11)
+        {
+            Pointer11.SetActive(true);
+        }
+    }
 
+    public void SetAllUnactive()
+    {
+        Pointer5.SetActive(false);
+        Pointer8.SetActive(false);
+        Pointer11.SetActive(false);
+        flag5 = false;
+        flag8 = false;
+        flag11 = false;
     }
 
     public void AlignFirst()
     {
+        SetAllUnactive();
+
         StartCoroutine(MoveToFirst());
     }
 
@@ -39,6 +68,8 @@ public class RulerScript : MonoBehaviour
                 yield return new WaitForSeconds(0.04f);
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
+
+            flag5 = true;
         }
 
         else
@@ -49,11 +80,15 @@ public class RulerScript : MonoBehaviour
                 yield return new WaitForSeconds(0.04f);
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
+
+            flag5 = true;
         }
     }
 
     public void AlignSecond()
     {
+        SetAllUnactive();
+
         StartCoroutine(moveToSecond());
     }
 
@@ -70,6 +105,8 @@ public class RulerScript : MonoBehaviour
                 yield return new WaitForSeconds(0.04f);
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
+
+            flag8 = true;
         }
 
         else
@@ -80,11 +117,15 @@ public class RulerScript : MonoBehaviour
                 yield return new WaitForSeconds(0.04f);
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
+
+            flag8 = true;
         }
     }
 
     public void AlignThird()
     {
+        SetAllUnactive();
+
         StartCoroutine(moveToThird());
     }
 
@@ -101,6 +142,8 @@ public class RulerScript : MonoBehaviour
                 yield return new WaitForSeconds(0.04f);
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
+
+            flag11 = true;
         }
         else
         {
@@ -110,6 +153,8 @@ public class RulerScript : MonoBehaviour
                 yield return new WaitForSeconds(0.04f);
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
+
+            flag11 = true;
         }
     }
 
