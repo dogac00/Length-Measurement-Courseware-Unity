@@ -50,6 +50,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Scene9");
     }
 
+    public void LoadScene10()
+    {
+        SceneManager.LoadScene("Scene10");
+    }
+
     public void Quit()
     {
         Application.Quit();

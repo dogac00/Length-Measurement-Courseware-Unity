@@ -5,9 +5,9 @@ using UnityEngine;
 public class DragScript : MonoBehaviour
 {
     public bool isinBox;
-    public Vector3 curPos;
-    Vector3 firstPos;
-    bool drag = false;
+    private Vector3 curPos;
+    private Vector3 firstPos;
+    private bool drag = false;
 
     void Start()
     {
@@ -42,22 +42,22 @@ public class DragScript : MonoBehaviour
         {
             if (this.name == "compass")
             {
-                this.transform.position = new Vector3(-1.38f, -2.52f, 0);
+                this.transform.position = new Vector3(-1.72f, -2.52f, 0);
             }
 
             else if (this.name == "ruler")
             {
-                this.transform.position = new Vector3(-0.34f, -2.58f, 0);
+                this.transform.position = new Vector3(-0.64f, -2.58f, 0);
             }
 
             else if (this.name == "hammer")
             {
-                this.transform.position = new Vector3(0.51f, -2.64f, 0);
+                this.transform.position = new Vector3(0.02f, -2.64f, 0);
             }
 
             else if (this.name == "meter")
             {
-                this.transform.position = new Vector3(0.11f, -2.75f, 0);
+                this.transform.position = new Vector3(-0.40f, -2.75f, 0);
             }
         }
 

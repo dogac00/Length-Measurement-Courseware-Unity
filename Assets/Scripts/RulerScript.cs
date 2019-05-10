@@ -13,10 +13,12 @@ public class RulerScript : MonoBehaviour
     float thirdTargetY = -2.52f;
     float oldY = -3.6f;
     private bool flag5, flag8, flag11;
+    private bool isMoving;
 
     // Start is called before the first frame update
     void Start()
     {
+        isMoving = false;
         flag5 = false;
         flag8 = false;
         flag11 = false;
@@ -52,7 +54,11 @@ public class RulerScript : MonoBehaviour
     {
         SetAllUnactive();
 
-        StartCoroutine(MoveToFirst());
+        if (!isMoving)
+        {
+            isMoving = true;
+            StartCoroutine(MoveToFirst());
+        }
     }
 
     IEnumerator MoveToFirst()
@@ -70,6 +76,7 @@ public class RulerScript : MonoBehaviour
             }
 
             flag5 = true;
+            isMoving = false;
         }
 
         else
@@ -82,6 +89,7 @@ public class RulerScript : MonoBehaviour
             }
 
             flag5 = true;
+            isMoving = false;
         }
     }
 
@@ -89,7 +97,11 @@ public class RulerScript : MonoBehaviour
     {
         SetAllUnactive();
 
-        StartCoroutine(moveToSecond());
+        if (!isMoving)
+        {
+            isMoving = true;
+            StartCoroutine(moveToSecond());
+        }
     }
 
     IEnumerator moveToSecond()
@@ -106,6 +118,7 @@ public class RulerScript : MonoBehaviour
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
 
+            isMoving = false;
             flag8 = true;
         }
 
@@ -118,6 +131,7 @@ public class RulerScript : MonoBehaviour
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
 
+            isMoving = false;
             flag8 = true;
         }
     }
@@ -126,7 +140,11 @@ public class RulerScript : MonoBehaviour
     {
         SetAllUnactive();
 
-        StartCoroutine(moveToThird());
+        if (!isMoving)
+        {
+            isMoving = true;
+            StartCoroutine(moveToThird());
+        }
     }
 
     IEnumerator moveToThird()
@@ -143,6 +161,7 @@ public class RulerScript : MonoBehaviour
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
 
+            isMoving = false;
             flag11 = true;
         }
         else
@@ -154,13 +173,20 @@ public class RulerScript : MonoBehaviour
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
 
+            isMoving = false;
             flag11 = true;
         }
     }
 
     public void ReturnToOldPosition()
     {
-        StartCoroutine(moveToOld());
+        SetAllUnactive();
+
+        if (!isMoving)
+        {
+            isMoving = true;
+            StartCoroutine(moveToOld());
+        }
     }
 
     IEnumerator moveToOld()
@@ -176,6 +202,8 @@ public class RulerScript : MonoBehaviour
                 yield return new WaitForSeconds(0.04f);
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
+
+            isMoving = false;
         }
         else
         {
@@ -185,6 +213,8 @@ public class RulerScript : MonoBehaviour
                 yield return new WaitForSeconds(0.04f);
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
+
+            isMoving = false;
         }
     }
 

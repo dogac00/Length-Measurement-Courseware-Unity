@@ -54,15 +54,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CarScript.cs" />
-     <Compile Include="Assets\Scripts\CheckScript.cs" />
      <Compile Include="Assets\Scripts\DragScript.cs" />
      <Compile Include="Assets\Scripts\FirstScene.cs" />
-     <Compile Include="Assets\Scripts\InputsCheckScript.cs" />
      <Compile Include="Assets\Scripts\RulerScript.cs" />
-     <Compile Include="Assets\Scripts\Scene8Scripts\AlignRuler.cs" />
-     <Compile Include="Assets\Scripts\Scene8Scripts\DragandDrop.cs" />
-     <Compile Include="Assets\Scripts\Scene9Scripts\RulerDrag.cs" />
-     <Compile Include="Assets\Scripts\Scene9Scripts\TableDrag.cs" />
+     <Compile Include="Assets\Scripts\Scene 1\CheckScript.cs" />
+     <Compile Include="Assets\Scripts\Scene 10\TableDrag.cs" />
+     <Compile Include="Assets\Scripts\Scene 7\InputsCheckScript.cs" />
+     <Compile Include="Assets\Scripts\Scene 8\AlignRuler.cs" />
+     <Compile Include="Assets\Scripts\Scene 8\DragandDrop.cs" />
+     <Compile Include="Assets\Scripts\Scene 9\RulerDrag.cs" />
      <Compile Include="Assets\Scripts\SceneLoader.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/nuri.akyildiz/Desktop/length/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
