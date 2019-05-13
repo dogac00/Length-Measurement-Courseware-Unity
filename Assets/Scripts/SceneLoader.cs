@@ -55,6 +55,16 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Scene10");
     }
 
+    public void LoadScene11()
+    {
+        SceneManager.LoadScene("Scene11");
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void Quit()
     {
         Application.Quit();

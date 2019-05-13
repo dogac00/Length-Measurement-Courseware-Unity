@@ -320,6 +320,31 @@ PrefabInstance:
         Masa Yap\u0131m\u0131 i\xE7in Gerekli Olan\nUzun Par\xE7alar\u0131n \xD6l\xE7\xFCmleri\nElimizde
         Var :)"
       objectReference: {fileID: 0}
+    - target: {fileID: 2486514603309956048, guid: 5404d635f8a208b4d8f6041aab61303e,
+        type: 3}
+      propertyPath: m_Name
+      value: Forward
+      objectReference: {fileID: 0}
+    - target: {fileID: 2486514603309956050, guid: 5404d635f8a208b4d8f6041aab61303e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1228603041}
+    - target: {fileID: 2486514603309956050, guid: 5404d635f8a208b4d8f6041aab61303e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2486514603309956050, guid: 5404d635f8a208b4d8f6041aab61303e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2486514603309956050, guid: 5404d635f8a208b4d8f6041aab61303e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Scene7_5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5404d635f8a208b4d8f6041aab61303e, type: 3}
 --- !u!224 &30347387 stripped
@@ -377,7 +402,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 347.7, y: -47.553024}
+  m_AnchoredPosition: {x: 347.7, y: -47.55304}
   m_SizeDelta: {x: -695.4, y: -95.105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30695948
@@ -2964,7 +2989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.8, y: -0.5}
+  m_AnchoredPosition: {x: 6.799999, y: -0.5}
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1304915914
@@ -3581,7 +3606,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.4, y: -0.5}
+  m_AnchoredPosition: {x: 6.3999996, y: -0.5}
   m_SizeDelta: {x: -22.39, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1650784845

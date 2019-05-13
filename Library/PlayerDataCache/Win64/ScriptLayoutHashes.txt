@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/nuri.akyildiz/Desktop/Game/odev_storyboard.exe
+C:/Users/nuri.akyildiz/Desktop/build/odev_storyboard.exe
 SceneListBegin?
 Assets/Scenes/Scene1.unity
 Assets/Scenes/Scene2.unity
@@ -12,6 +12,7 @@ Assets/Scenes/Scene7.unity
 Assets/Scenes/Scene8.unity
 Assets/Scenes/Scene9.unity
 Assets/Scenes/Scene10.unity
+Assets/Scenes/Scene11.unity
 SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -127,6 +128,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 8aff2a9e1c9f53aa4e78bf304a9c070f Assembly-CSharp.dll:.AlignRuler
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
+0f5e242540e9f9abbcbfe6e5a06a816b Assembly-CSharp.dll:.TagScript
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 1e4c1c1ee47c03d5d3fdf8705fc93292 Assembly-CSharp.dll:.InputsCheckScript
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator

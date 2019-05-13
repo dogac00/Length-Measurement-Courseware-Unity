@@ -1276,8 +1276,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 358.66, y: -108.8}
-  m_SizeDelta: {x: 129.98, y: 37.52}
+  m_AnchoredPosition: {x: 344.8, y: -122.8}
+  m_SizeDelta: {x: 92.6, y: 37.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1118797547
 MonoBehaviour:
@@ -1312,7 +1312,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u015Eimdi \u0130lerleyebilirsin"
+  m_Text: "\u015Eimdi \u0130lerle"
 --- !u!222 &1118797548
 CanvasRenderer:
   m_ObjectHideFlags: 0
