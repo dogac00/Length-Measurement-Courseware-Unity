@@ -9,12 +9,13 @@ public class Scene12Script : MonoBehaviour
     public InputField firstCMInput, firstMMInput, secondMMInput, secondCMInput, thirdCMInput, thirdMMInput;
     public GameObject successPanel, tryAgainPanel;
 
-    private bool flag;
+    private bool flag, isCalculated;
     private float firstX, firstY;
 
     // Start is called before the first frame update
     void Start()
     {
+        isCalculated = false;
         firstX = firstY = 0;
         firstCM.text = firstMM.text = "";
     }
@@ -79,7 +80,10 @@ public class Scene12Script : MonoBehaviour
 
             if (flag)
             {
-                StartCoroutine(CalculateLength());
+                if (!isCalculated)
+                {
+                    StartCoroutine(CalculateLength());
+                }
                 break;
             }
 
@@ -93,16 +97,18 @@ public class Scene12Script : MonoBehaviour
         while (firstY < 9 && firstX == 0)
         {
             firstMM.text = (++firstY).ToString() + " mm";
-            yield return new WaitForSeconds(0.2F);
+            yield return new WaitForSeconds(0.25F);
         }
 
         firstCM.text = (++firstX).ToString() + " cm";
-        firstMM.text = (firstY = 0).ToString() + " mm";
+        firstY = 0;
 
-        while (firstY < 2)
+        while (firstY < 3)
         {
-            firstMM.text = (++firstY).ToString() + " mm";
-            yield return new WaitForSeconds(0.2F);
+            firstMM.text = (firstY++).ToString() + " mm";
+            yield return new WaitForSeconds(0.25F);
         }
+
+        isCalculated = true;
     }
 }
