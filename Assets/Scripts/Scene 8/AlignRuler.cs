@@ -19,11 +19,13 @@ public class AlignRuler : MonoBehaviour
     private string aligned;
     
     private bool flag;
+    private bool isMoving;
 
     // Start is called before the first frame update
     void Start()
     {
         aligned = "null";
+        isMoving = false;
     }
 
     // Update is called once per frame
@@ -65,10 +67,13 @@ public class AlignRuler : MonoBehaviour
 
     public void AlignToNormal()
     {
-        SetAllUnactive();
-        aligned = "null";
-
-        StartCoroutine(AlignToNormalCoroutine());
+        if (!isMoving)
+        {
+            SetAllUnactive();
+            aligned = "null";
+            isMoving = true;
+            StartCoroutine(AlignToNormalCoroutine());
+        }
     }
 
     IEnumerator AlignToNormalCoroutine()
@@ -108,6 +113,7 @@ public class AlignRuler : MonoBehaviour
 
             if (flag)
             {
+                isMoving = false;
                 break;
             }
 
@@ -123,9 +129,13 @@ public class AlignRuler : MonoBehaviour
             return;
         }
 
-        aligned = "body";
-        SetAllUnactive();
-        StartCoroutine(AlignToBodyCoroutine());
+        if (!isMoving)
+        {
+            aligned = "body";
+            isMoving = true;
+            SetAllUnactive();
+            StartCoroutine(AlignToBodyCoroutine());
+        }
     }
 
     IEnumerator AlignToBodyCoroutine()
@@ -175,6 +185,7 @@ public class AlignRuler : MonoBehaviour
 
             if (flag)
             {
+                isMoving = false;
                 Pointer2.SetActive(true);
                 break;
             }
@@ -191,9 +202,13 @@ public class AlignRuler : MonoBehaviour
             return;
         }
 
-        aligned = "leg";
-        SetAllUnactive();
-        StartCoroutine(AlignToLegCoroutine());
+        if (!isMoving)
+        {
+            aligned = "leg";
+            isMoving = true;
+            SetAllUnactive();
+            StartCoroutine(AlignToLegCoroutine());
+        }
     }
 
     IEnumerator AlignToLegCoroutine()
@@ -245,6 +260,7 @@ public class AlignRuler : MonoBehaviour
 
             if (flag)
             {
+                isMoving = false;
                 Pointer3.SetActive(true);
                 break;
             }

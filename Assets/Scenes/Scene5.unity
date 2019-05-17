@@ -619,6 +619,7 @@ MonoBehaviour:
   toolsPanel: {fileID: 848015599}
   FailurePanel: {fileID: 847338984}
   SuccessPanel: {fileID: 1875179803}
+  getToolsButton: {fileID: 746854732}
   distance: {fileID: 428995914}
   toolsDistance: {fileID: 1056518774}
 --- !u!4 &274710869
@@ -1085,7 +1086,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0130leri Git"
+  m_Text: "100m \u0130leri"
 --- !u!222 &388748924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3059,7 +3060,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Geri Git
+  m_Text: 100m Geri
 --- !u!222 &2097355792
 CanvasRenderer:
   m_ObjectHideFlags: 0
