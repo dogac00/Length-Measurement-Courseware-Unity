@@ -13,22 +13,22 @@ public class MeterInputsCheck : MonoBehaviour
 
     private bool leftWidthCondition()
     {
-        return leftWidthCentimeter.text == "80" && leftWidthMeter.text == "" || leftWidthMeter.text == "0";
+        return leftWidthCentimeter.text == "60" && leftWidthMeter.text == "" || leftWidthMeter.text == "0";
     }
 
     private bool leftHeightCondition()
     {
-        return leftHeightMeter.text == "2" && leftHeightCentimeter.text == "40";
+        return leftHeightMeter.text == "1" && leftHeightCentimeter.text == "60";
     }
 
     private bool rightWidthCondition()
     {
-        return rightWidthMeter.text == "1" && rightWidthCentimeter.text == "20";
+        return rightWidthCentimeter.text == "80" && rightWidthMeter.text == "" || rightWidthMeter.text == "0";
     }
 
     private bool rightHeightCondition()
     {
-        return rightHeightMeter.text == "2" && rightHeightCentimeter.text == "80";
+        return rightHeightMeter.text == "2" && rightHeightCentimeter.text == "" || rightHeightCentimeter.text == "0";
     }
 
     public void CheckValues()

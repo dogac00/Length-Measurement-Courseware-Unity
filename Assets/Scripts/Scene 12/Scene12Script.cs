@@ -7,7 +7,8 @@ public class Scene12Script : MonoBehaviour
 {
     public Text firstCM, firstMM;
     public InputField firstCMInput, firstMMInput, secondMMInput, secondCMInput, thirdCMInput, thirdMMInput;
-    public GameObject successPanel, tryAgainPanel;
+    public GameObject successPanel, tryAgainPanel, redPointer;
+    public float redPointerPosX;
 
     private bool flag, isCalculated;
     private float firstX, firstY;
@@ -23,7 +24,7 @@ public class Scene12Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        redPointerPosX = redPointer.transform.position.x;
     }
 
     public void CheckValues()
@@ -82,6 +83,7 @@ public class Scene12Script : MonoBehaviour
             {
                 if (!isCalculated)
                 {
+                    redPointer.SetActive(true);
                     StartCoroutine(CalculateLength());
                 }
                 break;
@@ -92,23 +94,33 @@ public class Scene12Script : MonoBehaviour
         }
     }
 
+    private void MovePointer()
+    {
+        Vector3 pointerPos = redPointer.transform.position;
+        redPointer.transform.position = new Vector3(pointerPos.x + 0.23F, pointerPos.y);
+    }
+
     IEnumerator CalculateLength()
     {
         while (firstY < 9 && firstX == 0)
         {
+            MovePointer();
             firstMM.text = (++firstY).ToString() + " mm";
             yield return new WaitForSeconds(0.25F);
         }
 
+        MovePointer();
         firstCM.text = (++firstX).ToString() + " cm";
         firstY = 0;
 
         while (firstY < 3)
         {
+            MovePointer();
             firstMM.text = (firstY++).ToString() + " mm";
             yield return new WaitForSeconds(0.25F);
         }
 
         isCalculated = true;
+        Destroy(redPointer, 3);
     }
 }

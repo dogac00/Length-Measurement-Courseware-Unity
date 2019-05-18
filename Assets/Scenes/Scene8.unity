@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 319486786}
   - component: {fileID: 319486787}
   m_Layer: 0
-  m_Name: builder
+  m_Name: Builder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1429,7 +1429,7 @@ GameObject:
   - component: {fileID: 961156776}
   - component: {fileID: 961156775}
   m_Layer: 0
-  m_Name: ruler-mm
+  m_Name: Ruler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2922,7 +2922,7 @@ GameObject:
   - component: {fileID: 1839000849}
   - component: {fileID: 1839000848}
   m_Layer: 0
-  m_Name: table
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3845,7 +3845,7 @@ GameObject:
   - component: {fileID: 2123238859}
   - component: {fileID: 2123238858}
   m_Layer: 0
-  m_Name: background_clear
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

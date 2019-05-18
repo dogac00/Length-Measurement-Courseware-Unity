@@ -64,7 +64,6 @@
     <Compile Include="Assets\Scripts\Scene 12\Scene12Script.cs" />
     <Compile Include="Assets\Scripts\Scene 14\MeterInputsCheck.cs" />
     <Compile Include="Assets\Scripts\Scene 14\RotateMeterScript.cs" />
-    <Compile Include="Assets\Scripts\Scene 14\Scene14Script.cs" />
     <Compile Include="Assets\Scripts\Scene 15\CheckConversionsScript.cs" />
     <Compile Include="Assets\Scripts\Scene 15\ConverterScript.cs" />
     <Compile Include="Assets\Scripts\Scene 3\DragScript.cs" />
