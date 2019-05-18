@@ -5,14 +5,11 @@ using UnityEngine.UI;
 
 public class CarScript : MonoBehaviour
 {
-    public GameObject car;
-    public GameObject toolsPanel;
-    public GameObject FailurePanel;
-    public GameObject SuccessPanel;
+    public GameObject car, toolsPanel, FailurePanel, SuccessPanel, QuestionPanel, CheckAnswersPanel, getToolsButton;
 
-    public GameObject getToolsButton;
     public Text distance;
     public Text toolsDistance;
+    public InputField FirstDistance, SecondDistance;
 
     public void MoveForward()
     {
@@ -80,11 +77,24 @@ public class CarScript : MonoBehaviour
     {
         if (distance.text == "400" && toolsDistance.text == "Alındı.")
         {
-            SuccessPanel.SetActive(true);
+            QuestionPanel.SetActive(true);
         }
         else
         {
             FailurePanel.SetActive(true);
+        }
+    }
+
+    public void CheckAnswers()
+    {
+        print("In");
+        if (FirstDistance.text == "200" && SecondDistance.text == "400")
+        {
+            SuccessPanel.SetActive(true);
+        }
+        else
+        {
+            CheckAnswersPanel.SetActive(true);
         }
     }
 
