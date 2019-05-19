@@ -15,6 +15,7 @@ public class TableDrag : MonoBehaviour
 
     void Start()
     {
+        firstShelf = secondShelf = thirdShelf = null;
         drag = false;
         firstPosition = this.transform.position;
     }
@@ -54,19 +55,19 @@ public class TableDrag : MonoBehaviour
         Vector3 currentPosition = this.transform.position;
         objectName = this.gameObject.name;
 
-        ClearOldShelf(objectName);
+        FindAndSetNull(objectName);
 
-        if (isInFirst(currentPosition.x, currentPosition.y))
+        if (isInFirst(currentPosition.x, currentPosition.y) && firstShelf == null)
         {
             firstShelf = objectName;
         }
 
-        else if (isInSecond(currentPosition.x, currentPosition.y))
+        else if (isInSecond(currentPosition.x, currentPosition.y) && secondShelf == null)
         {
             secondShelf = objectName;
         }
 
-        else if (isInThird(currentPosition.x, currentPosition.y))
+        else if (isInThird(currentPosition.x, currentPosition.y) && thirdShelf == null)
         {
             thirdShelf = objectName;
         }
@@ -75,22 +76,6 @@ public class TableDrag : MonoBehaviour
         {
             FindAndSetNull(objectName);
             this.transform.position = firstPosition;
-        }
-    }
-
-    private void ClearOldShelf(string name)
-    {
-        if (firstShelf == name)
-        {
-            firstShelf = null;
-        }
-        else if (secondShelf == name)
-        {
-            secondShelf = null;
-        }
-        else if (thirdShelf == name)
-        {
-            thirdShelf = null;
         }
     }
 

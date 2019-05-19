@@ -21,7 +21,7 @@ public class DragandDrop : MonoBehaviour
         if (drag)
         {
             Vector3 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            this.transform.position = new Vector3(currentPos.x, currentPos.y, 0);
+            this.transform.position = new Vector3(currentPos.x + 0.25F, currentPos.y, 0);
         }
     }
 
