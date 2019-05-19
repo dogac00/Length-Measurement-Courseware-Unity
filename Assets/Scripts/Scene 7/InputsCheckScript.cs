@@ -13,7 +13,7 @@ public class InputsCheckScript : MonoBehaviour
     public GameObject tryAgain;
     public GameObject helpPanel;
 
-    public GameObject ruler;
+    public GameObject ruler, Pointer;
 
     // Start is called before the first frame update
     void Start()
@@ -27,9 +27,16 @@ public class InputsCheckScript : MonoBehaviour
 
     }
 
+    private void ClearPointer()
+    {
+        Pointer.SetActive(false);
+        float curY = Pointer.transform.position.y;
+        Pointer.transform.position = new Vector3(-6.76F, curY);
+    }
+
     public void CheckValues()
     {
-        ruler.GetComponent<RulerScript>().SetAllUnactive();
+        ClearPointer();
 
         if (first.text.Trim() == "5" && second.text.Trim() == "8" && third.text.Trim() == "11")
         {

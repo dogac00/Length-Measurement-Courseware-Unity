@@ -57,7 +57,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\DragandDrop.cs" />
     <Compile Include="Assets\Scripts\FirstScene.cs" />
-    <Compile Include="Assets\Scripts\RulerScript.cs" />
     <Compile Include="Assets\Scripts\Scene 1\CheckScript.cs" />
     <Compile Include="Assets\Scripts\Scene 10\TableDrag.cs" />
     <Compile Include="Assets\Scripts\Scene 11\TagScript.cs" />
@@ -69,7 +68,9 @@
     <Compile Include="Assets\Scripts\Scene 3\DragScript.cs" />
     <Compile Include="Assets\Scripts\Scene 5\CarScript.cs" />
     <Compile Include="Assets\Scripts\Scene 7\InputsCheckScript.cs" />
+    <Compile Include="Assets\Scripts\Scene 7\RulerScript.cs" />
     <Compile Include="Assets\Scripts\Scene 8\AlignRuler.cs" />
+    <Compile Include="Assets\Scripts\Scene 8\CloseupScript.cs" />
     <Compile Include="Assets\Scripts\Scene 9\RulerDrag.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
