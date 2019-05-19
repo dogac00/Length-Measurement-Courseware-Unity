@@ -78,16 +78,16 @@ public class CloseupScript : MonoBehaviour
                 curY -= 0.04F;
             }
 
-            if (currentFov > targetFov + 1)
+            if (currentFov > targetFov + 0.5F)
             {
                 flag = false;
-                currentFov -= 1;
+                currentFov -= 0.5F;
             }
 
-            if (currentFov < targetFov - 1)
+            if (currentFov < targetFov - 0.5F)
             {
                 flag = false;
-                currentFov += 1;
+                currentFov += 0.5F;
             }
 
             if (flag)
