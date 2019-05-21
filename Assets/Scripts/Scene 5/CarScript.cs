@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CarScript : MonoBehaviour
@@ -10,6 +11,24 @@ public class CarScript : MonoBehaviour
     public Text distance;
     public Text toolsDistance;
     public InputField FirstDistance, SecondDistance;
+
+    public static bool isSuccessful;
+
+    void Start()
+    {
+        WorkForSuccess();
+    }
+
+    private void WorkForSuccess()
+    {
+        if (isSuccessful)
+        {
+            toolsDistance.text = "Alındı.";
+            toolsDistance.color = new Color(0, 255, 0);
+            getToolsButton.SetActive(false);
+            car.transform.position = new Vector3(-0.93F, -3.41F);
+        }
+    }
 
     public void MoveForward()
     {
@@ -63,9 +82,7 @@ public class CarScript : MonoBehaviour
     {
         if (distance.text == "200")
         {
-            getToolsButton.SetActive(false);
-            toolsDistance.text = "Alındı.";
-            toolsDistance.color = new Color(0, 255, 0);
+            SceneManager.LoadScene("Scene3");
         }
         else
         {
@@ -96,11 +113,5 @@ public class CarScript : MonoBehaviour
         {
             CheckAnswersPanel.SetActive(true);
         }
-    }
-
-    void Start()
-    {
-        toolsDistance.text = "Alınmadı.";
-        toolsDistance.color = new Color(255, 0, 0);
     }
 }

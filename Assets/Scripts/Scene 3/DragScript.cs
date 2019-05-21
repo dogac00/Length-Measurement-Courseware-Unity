@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DragScript : MonoBehaviour
 {
@@ -8,6 +9,12 @@ public class DragScript : MonoBehaviour
     private Vector3 curPos;
     private Vector3 firstPos;
     private bool drag = false;
+
+    public void Success()
+    {
+        CarScript.isSuccessful = true;
+        SceneManager.LoadScene("Scene5");
+    }
 
     void Start()
     {

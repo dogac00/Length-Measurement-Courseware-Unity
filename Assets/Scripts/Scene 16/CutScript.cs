@@ -11,7 +11,7 @@ public class CutScript : MonoBehaviour
     public GameObject FirstZoomButton, SecondZoomButton, ThirdZoomButton, GoBackButton;
     public GameObject FirstOkay, SecondOkay, ThirdOkay;
     public Animator BackPart, BackPartSecond, BackPartExtra;
-    public Animator BodyPartExtra;
+    public Animator BodyPart, BodyPartExtra;
     public Animator LegPart, LegPartSecond, LegPartExtra;
     private bool flag, isZooming, zoomedIn;
     private bool firstCutted, secondCutted, thirdCutted;
@@ -24,6 +24,9 @@ public class CutScript : MonoBehaviour
         SetBodyAnimations(false);
         SetBackAnimations(false);
         SetLegAnimations(false);
+
+        BodyPart.enabled = false;
+
         TrueNumber = 0;
     }
 
@@ -95,20 +98,21 @@ public class CutScript : MonoBehaviour
             mouseInput.z = 10;
             mousePos = Camera.main.ScreenToWorldPoint(mouseInput);
 
-            if (isIn(mousePos))
+            if (mousePos.y < -3 && isIn(mousePos))
             {
                 Vector3 sawPosition = Saw.transform.position;
                 Saw.transform.position = new Vector3(mousePos.x + 0.4F, sawPosition.y);
             }
         }
+    }
 
+    private void CheckTrue()
+    {
         if (TrueNumber == 3)
         {
             StartCoroutine(AllTrue());
-            TrueNumber = 0;
         }
     }
-
     IEnumerator AllTrue()
     {
         Saw.SetActive(false);
@@ -118,6 +122,17 @@ public class CutScript : MonoBehaviour
         FirstOkay.SetActive(false);
         SecondOkay.SetActive(false);
         ThirdOkay.SetActive(false);
+
+        yield return new WaitForSeconds(1);
+
+        BackPart.Play("MakeChairAnimationBack");
+        yield return new WaitForSeconds(0.5F);
+
+        BodyPart.Play("MakeChairAnimationBody");
+        BodyPart.enabled = true;
+        yield return new WaitForSeconds(0.5F);
+
+        LegPart.Play("MakeChairAnimationLegPart");
 
         yield return null;
     }
@@ -168,6 +183,7 @@ public class CutScript : MonoBehaviour
             FirstOkay.SetActive(true);
             FirstButton.SetActive(false);
             firstCutted = true;
+            CheckTrue();
         }
         else
         {
@@ -186,6 +202,7 @@ public class CutScript : MonoBehaviour
             SecondOkay.SetActive(true);
             SecondButton.SetActive(false);
             secondCutted = true;
+            CheckTrue();
         }
         else
         {
@@ -204,6 +221,7 @@ public class CutScript : MonoBehaviour
             ThirdOkay.SetActive(true);
             ThirdButton.SetActive(false);
             thirdCutted = true;
+            CheckTrue();
         }
         else
         {
