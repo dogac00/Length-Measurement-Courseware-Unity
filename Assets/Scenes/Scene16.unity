@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 15925733}
   - component: {fileID: 15925732}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,8 +146,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -22.4}
-  m_SizeDelta: {x: 526.9, y: 91.6}
+  m_AnchoredPosition: {x: -58.09, y: -22.4}
+  m_SizeDelta: {x: 643.07, y: 91.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15925732
 MonoBehaviour:
@@ -182,10 +182,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Art\u0131k Bizden \u0130stenen \xD6l\xE7\xFClerde E\u015Fyalar\u0131 Yapmam\u0131z
-    Gerekiyor. \xD6nce Sandalye Yaparak Ba\u015Flayaca\u011F\u0131z. A\u015Fa\u011F\u0131da
-    S\u0131ras\u0131yla Sandalyenin S\u0131rt, G\xF6vde ve Ayak Par\xE7alar\u0131
-    Var. \u0130stenen \xD6l\xE7\xFClere G\xF6re Bunlar\u0131 Kesmelisin."
+  m_Text: "Bizden \u0130stenen \xD6l\xE7\xFClerde E\u015Fyalar\u0131 Yapmam\u0131z
+    Gerekiyor. \xD6nce Sandalye Yaparak Ba\u015Flayaca\u011F\u0131z. \u0130stenen
+    \xD6l\xE7\xFClere G\xF6re Alttaki Sandalye Par\xE7alar\u0131n\u0131 Testere ile
+    Kesmelisin."
 --- !u!222 &15925733
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 114.57999, y: -30.000002}
+  m_AnchoredPosition: {x: 114.57999, y: 19.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31088836
@@ -324,7 +324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000095367, y: -61.3}
+  m_AnchoredPosition: {x: -0.00000095367, y: -37.1}
   m_SizeDelta: {x: 69.64, y: 29.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &73433414
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 129458025}
   - component: {fileID: 129458026}
   m_Layer: 0
-  m_Name: carpenter-image
+  m_Name: Carpenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,8 +645,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165567878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.12, y: -2.34, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalPosition: {x: 3.12, y: -2.54, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -1046,8 +1046,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377453879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.74, y: -2.53, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalPosition: {x: -5.74, y: -2.65, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -1553,7 +1553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 114.2, y: 16.5}
+  m_AnchoredPosition: {x: 114.2, y: -31.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &466909747
@@ -1826,7 +1826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -266.31, y: -205}
+  m_AnchoredPosition: {x: -266.31, y: -197.6}
   m_SizeDelta: {x: 48, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &653208649
@@ -2486,8 +2486,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986072093}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.51, y: -2.39, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalPosition: {x: -0.51, y: -2.55, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -2760,7 +2760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -18.000076, y: -23.750015}
+  m_AnchoredPosition: {x: -18.000122, y: -23.75003}
   m_SizeDelta: {x: -313.7, y: -158.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1097855176
@@ -3015,7 +3015,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000014609, y: -0.00000047684}
+  m_AnchoredPosition: {x: 0.000014609, y: -27.3}
   m_SizeDelta: {x: 315, y: 124.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418844880
@@ -3031,7 +3031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3052,8 +3052,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "G\xF6r\xFCn\xFC\u015Fe G\xF6re Testere Aletimiz Kesim Yapmak i\xE7in Do\u011Fru
-    Yerde De\u011Fil. Testerenin Ucunun \xD6l\xE7\xFCmlerdeki Do\u011Fru \xD6l\xE7\xFCme
-    Geldi\u011Finden Emin Ol. Son Olarak D\xF6n\xFC\u015Ft\xFCrmelere Dikkat Et."
+    Yerde De\u011Fil."
 --- !u!222 &1418844881
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3211,8 +3210,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1747818173
-  m_SortingLayer: 4
+  m_SortingLayerID: -1698300223
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 547a20ea295d3654ab5c5f59a8211817, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3237,7 +3236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1493898385
 Rigidbody2D:
@@ -3375,7 +3374,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 30}
 --- !u!1 &1527828352
 GameObject:
@@ -3796,7 +3795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.999998, y: -205}
+  m_AnchoredPosition: {x: -17.999998, y: -197.6}
   m_SizeDelta: {x: 48, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1629539854
@@ -4197,7 +4196,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 156.4, y: -205}
+  m_AnchoredPosition: {x: 156.4, y: -196.6}
   m_SizeDelta: {x: 48, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701289327
@@ -4458,8 +4457,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -33.99994, y: -51.400024}
-  m_SizeDelta: {x: -447.1, y: -276}
+  m_AnchoredPosition: {x: -21.299988, y: -57.177002}
+  m_SizeDelta: {x: -505.21, y: -307.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1817655300
 MonoBehaviour:
