@@ -124,7 +124,7 @@ public class RulerScript : MonoBehaviour
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
 
-            MovePointer(-0.25F);
+            MovePointer(-0.32F);
             isMoving = false;
         }
 
@@ -137,7 +137,7 @@ public class RulerScript : MonoBehaviour
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
 
-            MovePointer(-0.25F);
+            MovePointer(-0.32F);
             isMoving = false;
         }
     }

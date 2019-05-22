@@ -22,6 +22,7 @@ public class MeterPerspectiveDrag : MonoBehaviour
         {
             Vector3 currentPos = Input.mousePosition;
             currentPos.z = 10;
+            currentPos.x = currentPos.x + 0.5F;
             Vector3 newPos = Camera.main.ScreenToWorldPoint(currentPos);
             this.transform.position = newPos;
         }

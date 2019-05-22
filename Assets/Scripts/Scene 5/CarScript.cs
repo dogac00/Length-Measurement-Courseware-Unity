@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CarScript : MonoBehaviour
 {
     public GameObject car, toolsPanel, FailurePanel, SuccessPanel, QuestionPanel, CheckAnswersPanel, getToolsButton;
+    public GameObject smallRuler, smallMeter;
 
     public Text distance;
     public Text toolsDistance;
@@ -23,6 +24,8 @@ public class CarScript : MonoBehaviour
     {
         if (isSuccessful)
         {
+            smallRuler.SetActive(true);
+            smallMeter.SetActive(true);
             toolsDistance.text = "Alındı.";
             toolsDistance.color = new Color(0, 255, 0);
             getToolsButton.SetActive(false);

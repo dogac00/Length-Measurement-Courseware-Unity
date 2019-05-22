@@ -7,6 +7,18 @@ public class CloseupScript : MonoBehaviour
     public GameObject BodyZoomButton, LegZoomButton, GoBackButton;
     private bool flag, isZooming;
 
+    private void ReverseActiveGameObject(GameObject obj)
+    {
+        if (obj.activeSelf)
+        {
+            obj.SetActive(false);
+        }
+        else
+        {
+            obj.SetActive(true);
+        }
+    }
+
     private void SetButtons(bool active)
     {
         BodyZoomButton.SetActive(active);
@@ -20,7 +32,7 @@ public class CloseupScript : MonoBehaviour
         {
             SetButtons(false);
             isZooming = true;
-            StartCoroutine(Zoom(-1.6F, -2.72F, 20));
+            StartCoroutine(Zoom(-1.6F, -2.72F, 20, false));
         }
     }
 
@@ -30,7 +42,7 @@ public class CloseupScript : MonoBehaviour
         {
             SetButtons(false);
             isZooming = true;
-            StartCoroutine(Zoom(-5.6F, -0.4F, 20));
+            StartCoroutine(Zoom(-6.4F, -0.4F, 20, false));
         }
     }
 
@@ -38,13 +50,12 @@ public class CloseupScript : MonoBehaviour
     {
         if (!isZooming)
         {
-            SetButtons(true);
             isZooming = true;
-            StartCoroutine(Zoom(0, 0, 53));
+            StartCoroutine(Zoom(0, 0, 53, true));
         }
     }
 
-    IEnumerator Zoom(float targetX, float targetY, int targetFov)
+    IEnumerator Zoom(float targetX, float targetY, int targetFov, bool isGoingBack)
     {
         while (true)
         {
@@ -78,20 +89,22 @@ public class CloseupScript : MonoBehaviour
                 curY -= 0.04F;
             }
 
-            if (currentFov > targetFov + 0.5F)
+            if (currentFov > targetFov + 0.3F)
             {
                 flag = false;
-                currentFov -= 0.5F;
+                currentFov -= 0.3F;
             }
 
-            if (currentFov < targetFov - 0.5F)
+            if (currentFov < targetFov - 0.3F)
             {
                 flag = false;
-                currentFov += 0.5F;
+                currentFov += 0.3F;
             }
 
             if (flag)
             {
+                if (isGoingBack) SetButtons(true);
+
                 isZooming = false;
                 break;
             }

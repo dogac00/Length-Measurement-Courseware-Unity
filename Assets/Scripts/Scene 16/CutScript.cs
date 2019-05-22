@@ -10,8 +10,9 @@ public class CutScript : MonoBehaviour
     public GameObject Saw, WrongPlacePanel, FirstButton, SecondButton, ThirdButton;
     public GameObject FirstZoomButton, SecondZoomButton, ThirdZoomButton, GoBackButton;
     public GameObject FirstOkay, SecondOkay, ThirdOkay;
+    public GameObject SuccessPanel;
     public Animator BackPart, BackPartSecond, BackPartExtra;
-    public Animator BodyPart, BodyPartExtra;
+    public Animator BodyPart, BodyPartSecond, BodyPartExtra;
     public Animator LegPart, LegPartSecond, LegPartExtra;
     private bool flag, isZooming, zoomedIn;
     private bool firstCutted, secondCutted, thirdCutted;
@@ -24,8 +25,10 @@ public class CutScript : MonoBehaviour
         SetBodyAnimations(false);
         SetBackAnimations(false);
         SetLegAnimations(false);
+        GoBackButton.SetActive(false);
 
         BodyPart.enabled = false;
+        BodyPartSecond.enabled = false;
 
         TrueNumber = 0;
     }
@@ -133,8 +136,38 @@ public class CutScript : MonoBehaviour
         yield return new WaitForSeconds(0.5F);
 
         LegPart.Play("MakeChairAnimationLegPart");
+        yield return new WaitForSeconds(1);
+
+        BackPartSecond.Play("MakeSecondChairBackPartAnimation");
+        yield return new WaitForSeconds(0.5F);
+
+        BodyPartSecond.Play("MakeSecondChairBodyPartAnimation");
+        BodyPartSecond.enabled = true;
+        yield return new WaitForSeconds(0.5F);
+
+        LegPartSecond.Play("MakeSecondChairLegPartAnimation");
+        yield return new WaitForSeconds(2.0F);
+
+        StartCoroutine(ShowSuccesPanel());
 
         yield return null;
+    }
+
+    IEnumerator ShowSuccesPanel()
+    {
+        Vector3 firstScale = Vector3.zero;
+        Vector3 lastScale = Vector3.one;
+        float time = 1.0f, totalTime = time;
+
+        SuccessPanel.SetActive(true);
+        SuccessPanel.transform.localScale = Vector3.zero;
+
+        while (time > 0)
+        {
+            time -= Time.deltaTime;
+            yield return new WaitForSeconds(Time.deltaTime);
+            SuccessPanel.transform.localScale = Vector3.Lerp(firstScale, lastScale, (totalTime - time) / totalTime);
+        }
     }
 
     private bool isIn(Vector3 position)
@@ -236,7 +269,7 @@ public class CutScript : MonoBehaviour
             zoomedIn = false;
             SetAllButtons(false);
             isZooming = true;
-            StartCoroutine(Zoom(-4.95F, -2.72F, 24));
+            StartCoroutine(Zoom(-4.95F, -2.72F, 24, false));
         }
     }
 
@@ -247,7 +280,7 @@ public class CutScript : MonoBehaviour
             zoomedIn = false;
             SetAllButtons(false);
             isZooming = true;
-            StartCoroutine(Zoom(-0.52F, -2.72F, 24));
+            StartCoroutine(Zoom(-0.52F, -2.72F, 24, false));
         }
     }
 
@@ -258,7 +291,7 @@ public class CutScript : MonoBehaviour
             zoomedIn = false;
             SetAllButtons(false);
             isZooming = true;
-            StartCoroutine(Zoom(3.54F, -2.72F, 24));
+            StartCoroutine(Zoom(3.54F, -2.72F, 24, false));
         }
     }
 
@@ -267,13 +300,12 @@ public class CutScript : MonoBehaviour
         if (!isZooming)
         {
             zoomedIn = true;
-            SetAllButtons(true);
             isZooming = true;
-            StartCoroutine(Zoom(0, 0, 53));
+            StartCoroutine(Zoom(0, 0, 53, true));
         }
     }
 
-    IEnumerator Zoom(float targetX, float targetY, int targetFov)
+    IEnumerator Zoom(float targetX, float targetY, int targetFov, bool isGoBack)
     {
         while (true)
         {
@@ -321,6 +353,7 @@ public class CutScript : MonoBehaviour
 
             if (flag)
             {
+                if (isGoBack) SetAllButtons(true);
                 zoomedIn = !zoomedIn;
                 isZooming = false;
                 break;
