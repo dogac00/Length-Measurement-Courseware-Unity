@@ -15,7 +15,7 @@ public class ConverterScript : MonoBehaviour
     {
         if (FirstPartInput.text == "40")
         {
-            FirstPartResult.text = "4 cm";
+            StartCoroutine(FirstPartCoroutine());
             firstConverted = true;
         }
         else
@@ -23,6 +23,15 @@ public class ConverterScript : MonoBehaviour
             ConverterPanel.SetActive(false);
             WarningPanel.SetActive(true);
         }
+    }
+
+    IEnumerator FirstPartCoroutine()
+    {
+        FirstPartResult.text = "40 / 10";
+
+        yield return new WaitForSeconds(1.2F);
+
+        FirstPartResult.text = "4 cm";
     }
 
     public void ConvertSecond()
@@ -39,9 +48,18 @@ public class ConverterScript : MonoBehaviour
         }
         else
         {
+            StartCoroutine(ConvertSecondCoroutine());
             secondConverted = true;
-            SecondPartResult.text = "50 cm";
         }
+    }
+
+    IEnumerator ConvertSecondCoroutine()
+    {
+        SecondPartResult.text = "5 x 10";
+
+        yield return new WaitForSeconds(1.2F);
+
+        SecondPartResult.text = "50 cm";
     }
 
     public void ConvertThird()
@@ -62,11 +80,15 @@ public class ConverterScript : MonoBehaviour
         }
     }
 
+    public void ConvertFourth()
+    {
+        ConverterPanel.SetActive(false);
+        OrderWarningPanel.SetActive(true);
+    }
     // Start is called before the first frame update
     void Start()
     {
         firstConverted = secondConverted = false;
-        FirstPartResult.text = SecondPartResult.text = "";
     }
 
     // Update is called once per frame

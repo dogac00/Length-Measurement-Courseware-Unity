@@ -31,20 +31,7 @@ public class AlignRuler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0)
-        {
-            if (myCamera.fieldOfView > 1)
-            {
-                myCamera.fieldOfView--;
-            }
-        }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
-        {
-            if (myCamera.fieldOfView < 53)
-            {
-                myCamera.fieldOfView++;
-            }
-        }
+
     }
 
     private void SetAllUnactive()
