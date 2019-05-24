@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class DragandDrop : MonoBehaviour
 {
-    private bool drag = false;
+    protected bool drag = false;
+    protected Camera mainCamera;
 
     void Start()
     {
+        mainCamera = Camera.main;
         drag = false;
     }
 
@@ -20,7 +22,7 @@ public class DragandDrop : MonoBehaviour
     {
         if (drag)
         {
-            Vector3 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 currentPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             this.transform.position = new Vector3(currentPos.x + 0.4F, currentPos.y, 0);
         }
     }
