@@ -26,6 +26,7 @@ public class CarScript : MonoBehaviour
         {
             smallRuler.SetActive(true);
             smallMeter.SetActive(true);
+            distance.text = "200";
             toolsDistance.text = "Alındı.";
             toolsDistance.color = new Color(0, 255, 0);
             getToolsButton.SetActive(false);
@@ -95,7 +96,7 @@ public class CarScript : MonoBehaviour
 
     public void GetInside()
     {
-        if (distance.text == "400" && toolsDistance.text == "Alındı.")
+        if (distance.text == "400" && isSuccessful)
         {
             QuestionPanel.SetActive(true);
         }

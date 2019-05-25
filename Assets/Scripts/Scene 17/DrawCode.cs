@@ -51,6 +51,7 @@ public class DrawCode : MonoBehaviour
             }
             else if (isInsideTable(pencilPosition.x, pencilPosition.y) && !Cursor.visible)
             {
+                Cursor.visible = true;
                 ModeScript.isInPanelMode = true;
                 WrongPlacePanel.SetActive(true);
             }

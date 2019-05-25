@@ -30,7 +30,7 @@ public class ModeScript : MonoBehaviour
         SetCursor(mode);
     }
 
-    private void SetCursor(bool isVisible)
+    public void SetCursor(bool isVisible)
     {
         Cursor.visible = isVisible;
     }
