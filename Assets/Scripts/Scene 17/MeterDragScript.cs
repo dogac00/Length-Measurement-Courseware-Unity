@@ -25,7 +25,7 @@ public class MeterDragScript : DragandDrop
                 dragHand.transform.position = new Vector3(mousePosition.x, mousePosition.y);
             }
 
-            SetCursorVisibility(mousePosition);
+            if (!ModeScript.isInPanelMode) SetCursorVisibility(mousePosition);
         }
     }
 

@@ -7,6 +7,7 @@ public class ModeScript : MonoBehaviour
 {
     public static bool isInDragMode;
     public static bool isInDrawMode;
+    public static bool isInPanelMode;
 
     public GameObject drawButton, dragButton;
     public GameObject drawObject, dragObject;
@@ -20,6 +21,18 @@ public class ModeScript : MonoBehaviour
 
         drawButton.GetComponent<Image>().sprite = drawButtonActive;
         dragButton.GetComponent<Image>().sprite = dragButtonInactive;
+    }
+
+    public void MakePanelMode(bool mode)
+    {
+        isInPanelMode = mode;
+
+        SetCursor(mode);
+    }
+
+    private void SetCursor(bool isVisible)
+    {
+        Cursor.visible = isVisible;
     }
 
     private void SetModes(bool dragMode, bool drawMode)

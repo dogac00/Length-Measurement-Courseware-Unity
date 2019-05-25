@@ -24,7 +24,7 @@ public class PencilScript : MonoBehaviour
                 this.transform.position = new Vector3(mousePosition.x, mousePosition.y);
             }
 
-            SetCursorVisibility();
+            if (!ModeScript.isInPanelMode) SetCursorVisibility();
         }
     }
 

@@ -5,8 +5,8 @@ using UnityEngine;
 public class DrawCode : MonoBehaviour
 {
     public GameObject Pencil;
-    public GameObject[] Parts, Lines, Buttons;
-    public GameObject Table;
+    public GameObject[] Parts, Lines, Buttons, Panels;
+    public GameObject Table, SuccessPanel, WrongPlacePanel;
     public Vector3 pencilPosition;
     public Animator Bottom, Left;
 
@@ -49,6 +49,11 @@ public class DrawCode : MonoBehaviour
 
                 CheckDrawings();
             }
+            else if (isInsideTable(pencilPosition.x, pencilPosition.y) && !Cursor.visible)
+            {
+                ModeScript.isInPanelMode = true;
+                WrongPlacePanel.SetActive(true);
+            }
         }
     }
 
@@ -78,15 +83,44 @@ public class DrawCode : MonoBehaviour
         {
             item.SetActive(false);
         }
+
+        foreach (var item in Panels)
+        {
+            item.SetActive(false);
+        }
     }
 
     IEnumerator CutTable()
     {
         yield return new WaitForSeconds(3.6F);
 
+        ModeScript.isInDragMode = false;
+        ModeScript.isInDrawMode = false;
+        ModeScript.isInPanelMode = true;
+
+        Cursor.visible = true;
+
         SetPartsActive();
 
-        yield return null;
+        yield return new WaitForSeconds(2);
+
+        StartCoroutine(ShowSuccessPanel());
+    }
+
+    IEnumerator ShowSuccessPanel()
+    {
+        float time = 1;
+        float timemax = time;
+
+        SuccessPanel.SetActive(true);
+        SuccessPanel.transform.localScale = Vector3.zero;
+
+        while (time > 0)
+        {
+            time -= Time.deltaTime;
+            yield return new WaitForSeconds(Time.deltaTime);
+            SuccessPanel.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, (timemax - time) / timemax);
+        }
     }
 
     IEnumerator DrawFromLeft()
@@ -127,5 +161,10 @@ public class DrawCode : MonoBehaviour
     private bool isRightPositionLeft(float x, float y)
     {
         return x > -4.80F && x < -4.53F && y > 0.39F && y < 0.74F;
+    }
+
+    private bool isInsideTable(float x, float y)
+    {
+        return x > -5 && x < 3.24F && y > -2.70F && y < 1.92F;
     }
 }
