@@ -6,8 +6,10 @@ public class TagScript : MonoBehaviour
 {
     private static string firstLeg, secondLeg, thirdLeg;
     private bool drag = false;
+    private string value;
     private Vector3 first6, first8, first10, fixedFirst, fixedSecond, fixedThird;
-    public GameObject tryAgain, successPanel;
+    private Vector3 firstPosition;
+    private GameObject tryAgain, successPanel, Code;
 
     void Start()
     {
@@ -21,6 +23,12 @@ public class TagScript : MonoBehaviour
         secondLeg = null;
         thirdLeg = null;
         drag = false;
+
+        firstPosition = this.transform.position;
+
+        Code = GameObject.Find("Code");
+
+        value = this.gameObject.name.Substring(0, 1);
     }
 
     void Update()
@@ -75,34 +83,21 @@ public class TagScript : MonoBehaviour
 
     public void CheckValues()
     {
-        ReturnAll();
-
-        if (firstLeg == "10cm-tag" && secondLeg == "6cm-tag" && thirdLeg == "8cm-tag")
+        if (firstLeg == "10cmTag" && secondLeg == "6cmTag" && thirdLeg == "8cmTag")
         {
-            successPanel.SetActive(true);
+            Code.GetComponent<GenerateScript>().ShowSuccessPanel();
         }
         else
         {
-            tryAgain.SetActive(true);
+            Code.GetComponent<GenerateScript>().ShowTryAgainPanel();
         }
 
         ClearAllData();
     }
 
-    private void ReturnToOldPosition(string objName)
+    private void ReturnToOldPosition()
     {
-        if (objName == "6cm-tag")
-        {
-            transform.position = first6;
-        }
-        else if (objName == "8cm-tag")
-        {
-            transform.position = first8;
-        }
-        else if (objName == "10cm-tag")
-        {
-            transform.position = first10;
-        }
+        this.transform.position = firstPosition;
     }
 
     void OnMouseDown()
@@ -141,7 +136,7 @@ public class TagScript : MonoBehaviour
         }
         else
         {
-            ReturnToOldPosition(objectName);
+            ReturnToOldPosition();
         }
     }
 

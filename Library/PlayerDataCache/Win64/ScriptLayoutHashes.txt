@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/nuri.akyildiz/Desktop/Game/Length_Measurement.exe
+C:/Users/nuri.akyildiz/Desktop/build/Length_Measurement.exe
 SceneListBegin?
 Assets/Scenes/Scene1.unity
 Assets/Scenes/Scene2.unity
@@ -141,8 +141,9 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 c0d08b8fd82f2bb8a255c025adb65458 Assembly-CSharp.dll:.ModeScript
 8aff2a9e1c9f53aa4e78bf304a9c070f Assembly-CSharp.dll:.AlignRuler
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
-0f5e242540e9f9abbcbfe6e5a06a816b Assembly-CSharp.dll:.TagScript
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TagScript
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Scene6Animation
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ShowMessage
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 7b6861d081cf1375e3590aa1b9ae1102 Assembly-CSharp.dll:.DrawCode
 da645e4dedf97eaaf9cdc12079edb15c Assembly-CSharp.dll:.InputsCheckScript
@@ -199,3 +200,4 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 20c80fb40ac59a9fbad84d1262923c2c Assembly-CSharp.dll:.CarScript
 44eda9e11e2be4fbd7a942eb06cac436 Assembly-CSharp.dll:.CutScript
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.RotateMeterScript
+b60465c856aa72ab2d673765e2d8d563 Assembly-CSharp.dll:.GenerateScript

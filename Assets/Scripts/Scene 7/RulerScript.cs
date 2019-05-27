@@ -202,8 +202,8 @@ public class RulerScript : MonoBehaviour
         {
             while (curY < oldY)
             {
-                curY += 0.2f;
-                yield return new WaitForSeconds(0.04f);
+                curY += 0.1f;
+                yield return new WaitForSeconds(0.01f);
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
             
@@ -213,8 +213,8 @@ public class RulerScript : MonoBehaviour
         {
             while (curY > oldY)
             {
-                curY -= 0.2f;
-                yield return new WaitForSeconds(0.04f);
+                curY -= 0.1f;
+                yield return new WaitForSeconds(0.01f);
                 this.transform.position = new Vector3(now.x, curY, 0);
             }
 

@@ -105,23 +105,7 @@ public class DrawCode : MonoBehaviour
 
         yield return new WaitForSeconds(2);
 
-        StartCoroutine(ShowSuccessPanel());
-    }
-
-    IEnumerator ShowSuccessPanel()
-    {
-        float time = 1;
-        float timemax = time;
-
         SuccessPanel.SetActive(true);
-        SuccessPanel.transform.localScale = Vector3.zero;
-
-        while (time > 0)
-        {
-            time -= Time.deltaTime;
-            yield return new WaitForSeconds(Time.deltaTime);
-            SuccessPanel.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, (timemax - time) / timemax);
-        }
     }
 
     IEnumerator DrawFromLeft()
