@@ -82,11 +82,15 @@ public class GenerateScript : MonoBehaviour
     {
         foreach (var obj in FirstTags)
         {
-            if (obj.gameObject.name.Substring(0, 1) == TagValue.text)
+            if (TagValue.text == "1")
             {
-                obj.SetActive(true);
+                SetActive("1cmTag", 1);
             }
-            else if (obj.gameObject.name.Substring(0, 2) == TagValue.text)
+            else if (TagValue.text == "10")
+            {
+                SetActive("10cmTag", 1);
+            }
+            else if (obj.gameObject.name.Substring(0, 1) == TagValue.text)
             {
                 obj.SetActive(true);
             }
@@ -97,13 +101,51 @@ public class GenerateScript : MonoBehaviour
     {
         foreach (var obj in SecondTags)
         {
-            if (obj.gameObject.name.Substring(0, 1) == TagValue.text)
+            if (TagValue.text == "1")
+            {
+                SetActive("1cmTag", 2);
+            }
+            else if (TagValue.text == "10")
+            {
+                SetActive("10cmTag", 2);
+            }
+            else if (obj.gameObject.name.Substring(0, 1) == TagValue.text)
             {
                 obj.SetActive(true);
             }
-            else if (obj.gameObject.name.Substring(0, 2) == TagValue.text)
+        }
+    }
+
+    private void SetActive(string objName, int id)
+    {
+        if (id == 1)
+        {
+            foreach (var item in FirstTags)
             {
-                obj.SetActive(true);
+                if (item.name == objName)
+                {
+                    item.SetActive(true);
+                }
+            }
+        }
+        else if (id == 2)
+        {
+            foreach (var item in SecondTags)
+            {
+                if (item.name == objName)
+                {
+                    item.SetActive(true);
+                }
+            }
+        }
+        else if (id == 3)
+        {
+            foreach (var item in ThirdTags)
+            {
+                if (item.name == objName)
+                {
+                    item.SetActive(true);
+                }
             }
         }
     }
@@ -112,11 +154,15 @@ public class GenerateScript : MonoBehaviour
     {
         foreach (var obj in ThirdTags)
         {
-            if (obj.gameObject.name.Substring(0, 1) == TagValue.text)
+            if (TagValue.text == "1")
             {
-                obj.SetActive(true);
+                SetActive("1cmTag", 3);
             }
-            else if (obj.gameObject.name.Substring(0, 2) == TagValue.text)
+            else if (TagValue.text == "10")
+            {
+                SetActive("10cmTag", 3);
+            }
+            else if (obj.gameObject.name.Substring(0, 1) == TagValue.text)
             {
                 obj.SetActive(true);
             }
