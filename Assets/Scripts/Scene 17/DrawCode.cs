@@ -103,8 +103,10 @@ public class DrawCode : MonoBehaviour
 
         SetPartsActive();
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
 
+        ModeScript.isInPanelMode = true;
+        Cursor.visible = true;
         SuccessPanel.SetActive(true);
     }
 

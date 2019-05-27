@@ -19,9 +19,6 @@ public class TagScript : MonoBehaviour
         fixedFirst = new Vector3(-5.16F, -3.43F);
         fixedSecond = new Vector3(-0.58F, -3.12F);
         fixedThird = new Vector3(3.54F, -3.22F);
-        firstLeg = null;
-        secondLeg = null;
-        thirdLeg = null;
         drag = false;
 
         firstPosition = this.transform.position;
@@ -113,6 +110,7 @@ public class TagScript : MonoBehaviour
             this.transform.position = new Vector3(currentPos.x, currentPos.y, 0);
         }
     }
+    
 
     private void LocateObject()
     {
