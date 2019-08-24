@@ -6,6 +6,8 @@ public class MeterPerspectiveDrag : MonoBehaviour
 {
     private bool drag = false;
 
+    public GameObject HoldingHand;
+
     void Start()
     {
         drag = false;
@@ -13,6 +15,9 @@ public class MeterPerspectiveDrag : MonoBehaviour
 
     void OnMouseDown()
     {
+        Cursor.visible = false;
+        HoldingHand.SetActive(true);
+
         drag = true;
     }
 
@@ -25,11 +30,20 @@ public class MeterPerspectiveDrag : MonoBehaviour
             currentPos.x = currentPos.x + 0.5F;
             Vector3 newPos = Camera.main.ScreenToWorldPoint(currentPos);
             this.transform.position = newPos;
+            HoldingHand.transform.position = new Vector3(newPos.x, newPos.y, -1);
         }
     }
 
     void OnMouseUp()
     {
+        Cursor.visible = true;
+        HoldingHand.SetActive(false);
+
         drag = false;
     }
+}
+
+public enum CursorMode
+{
+    Hold, Hover, None
 }

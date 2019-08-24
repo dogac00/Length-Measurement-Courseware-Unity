@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DragScript : MonoBehaviour
+public class DragScript : DraggableObject
 {
     public bool isinBox;
-    private Vector3 curPos;
-    private Vector3 firstPos;
-    private bool drag = false;
 
     public void Success()
     {
@@ -16,34 +13,23 @@ public class DragScript : MonoBehaviour
         SceneManager.LoadScene("Scene5");
     }
 
-    void Start()
+    protected override void Start()
     {
-        firstPos = this.transform.position;
+        base.Start();
+
         isinBox = false;
     }
 
-    void Update()
+    protected override void OnMouseDown()
     {
-        curPos = this.transform.position;
+        base.OnMouseDown();
+
+        HoldingHand.Enable();
     }
 
-    void OnMouseDown()
+    protected override void OnMouseUp()
     {
-        drag = true;
-    }
-
-    void OnMouseDrag()
-    {
-        if (drag)
-        {
-            Vector3 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            this.transform.position = new Vector3(currentPos.x, currentPos.y, 0);
-        }
-    }
-
-    void OnMouseUp()
-    {
-        drag = false;
+        base.OnMouseUp();
 
         if (isinBox)
         {
@@ -67,11 +53,12 @@ public class DragScript : MonoBehaviour
                 this.transform.position = new Vector3(-0.60f, -2.75f, 0);
             }
         }
-
         else
         {
-            this.transform.position = new Vector3(firstPos.x, firstPos.y, 0);
+            base.GoBack();
         }
+
+        HoldingHand.Disable();
     }
 
     void OnTriggerEnter2D(Collider2D col)
