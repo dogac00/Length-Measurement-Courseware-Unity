@@ -10,7 +10,6 @@ public class GenerateScript : MonoBehaviour
     private static int totalCount;
     public GameObject RestartPanel, TryAgain, SuccessPanel, NumberPanel;
     public GameObject[] FirstTags, SecondTags, ThirdTags;
-    public GameObject FirstTagArr, SecondTagArr, ThirdTagArr;
 
     void Start()
     {

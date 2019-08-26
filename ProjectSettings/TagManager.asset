@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SuccessPanel
+  - TryAgainPanel
+  - 8cm
+  - 6cm
+  - 10cm
   layers:
   - Default
   - TransparentFX

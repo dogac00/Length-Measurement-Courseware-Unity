@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1A2D1F36-F3FD-CFB4-B941-947C2B77D5B7}</ProjectGuid>
+    <ProjectGuid>{6A8984CB-A95E-B93D-2052-ADD20FD47D37}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,11 +62,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ColliderObject.cs" />
     <Compile Include="Assets\Scripts\DragandDrop.cs" />
+    <Compile Include="Assets\Scripts\DraggableObject.cs" />
+    <Compile Include="Assets\Scripts\Enums\PanelTag.cs" />
+    <Compile Include="Assets\Scripts\Extensions\StringExtensions.cs" />
     <Compile Include="Assets\Scripts\FirstScene.cs" />
-    <Compile Include="Assets\Scripts\HoldingHand.cs" />
-    <Compile Include="Assets\Scripts\Scene 10\TableDrag.cs" />
+    <Compile Include="Assets\Scripts\HandScripts\HoldingHand.cs" />
+    <Compile Include="Assets\Scripts\HandScripts\HoveringHand.cs" />
+    <Compile Include="Assets\Scripts\Panels\Panel.cs" />
+    <Compile Include="Assets\Scripts\Scene 10\RulerDrag.cs" />
+    <Compile Include="Assets\Scripts\Scene 10\Table.cs" />
     <Compile Include="Assets\Scripts\Scene 11\GenerateScript.cs" />
+    <Compile Include="Assets\Scripts\Scene 11\Tag.cs" />
     <Compile Include="Assets\Scripts\Scene 11\TagScript.cs" />
     <Compile Include="Assets\Scripts\Scene 12\Scene12Script.cs" />
     <Compile Include="Assets\Scripts\Scene 14\MeterInputsCheck.cs" />
@@ -75,12 +83,12 @@
     <Compile Include="Assets\Scripts\Scene 15\ConverterScript.cs" />
     <Compile Include="Assets\Scripts\Scene 16\CutScript.cs" />
     <Compile Include="Assets\Scripts\Scene 16\MeterPerspectiveDrag.cs" />
+    <Compile Include="Assets\Scripts\Scene 16\PerspectiveHoveringHand.cs" />
     <Compile Include="Assets\Scripts\Scene 17\DrawCode.cs" />
     <Compile Include="Assets\Scripts\Scene 17\MeterDragScript.cs" />
     <Compile Include="Assets\Scripts\Scene 17\ModeScript.cs" />
     <Compile Include="Assets\Scripts\Scene 17\PencilScript.cs" />
     <Compile Include="Assets\Scripts\Scene 3\CheckScript.cs" />
-    <Compile Include="Assets\Scripts\Scene 3\DraggableObject.cs" />
     <Compile Include="Assets\Scripts\Scene 3\DragScript.cs" />
     <Compile Include="Assets\Scripts\Scene 5\CarScript.cs" />
     <Compile Include="Assets\Scripts\Scene 6\Scene6Animation.cs" />
@@ -88,7 +96,6 @@
     <Compile Include="Assets\Scripts\Scene 7\RulerScript.cs" />
     <Compile Include="Assets\Scripts\Scene 8\AlignRuler.cs" />
     <Compile Include="Assets\Scripts\Scene 8\CloseupScript.cs" />
-    <Compile Include="Assets\Scripts\Scene 9\RulerDrag.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\ShowMessage.cs" />
     <Compile Include="Assets\Scripts\Utility\Finder.cs" />
@@ -110,61 +117,61 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -344,13 +351,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity-master/Length-Measurement-Courseware-Unity-master/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/asus/source/repos/Length-Measurement-Courseware-Unity/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.2f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

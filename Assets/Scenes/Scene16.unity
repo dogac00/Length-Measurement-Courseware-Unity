@@ -2665,7 +2665,7 @@ GameObject:
   - component: {fileID: 727401137}
   - component: {fileID: 727401136}
   m_Layer: 0
-  m_Name: HoverHand
+  m_Name: HoveringHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4406,7 +4406,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 099b78e1518d95b41918c4b6c09d32e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoldingHand: {fileID: 415310015}
 --- !u!1 &1513880603
 GameObject:
   m_ObjectHideFlags: 0

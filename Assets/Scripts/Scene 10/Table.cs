@@ -2,36 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TableDrag : MonoBehaviour
+public class Table : DraggableObject
 {
-    private bool drag;
-    private Vector3 firstPosition;
-
     public static string firstShelf, secondShelf, thirdShelf;
-    public GameObject winPanel;
-    public GameObject tryAgain;
+    private GameObject winPanel, tryAgain;
 
     private string objectName;
 
-    void Start()
+    void Awake()
+    {
+        winPanel = Finder.FindObjectByTag(PanelTag.Success);
+        tryAgain = Finder.FindObjectByTag(PanelTag.TryAgain);
+    }
+
+    protected override void Start()
     {
         firstShelf = secondShelf = thirdShelf = null;
-        drag = false;
-        firstPosition = this.transform.position;
-    }
 
-    void OnMouseDown()
-    {
-        drag = true;
-    }
-
-    void OnMouseDrag()
-    {
-        if (drag)
-        {
-            Vector3 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            this.transform.position = new Vector3(currentPos.x, currentPos.y, 0);
-        }
+        base.Start();
     }
 
     private bool isInFirst(float x, float y)
@@ -49,9 +37,10 @@ public class TableDrag : MonoBehaviour
         return x > 2.48F && x < 5.52F && y > -0.40F && y < 0.16F;
     }
 
-    void OnMouseUp()
+    protected override void OnMouseUp()
     {
-        drag = false;
+        base.OnMouseUp();
+
         Vector3 currentPosition = this.transform.position;
         objectName = this.gameObject.name;
 
@@ -75,7 +64,7 @@ public class TableDrag : MonoBehaviour
         else
         {
             FindAndSetNull(objectName);
-            this.transform.position = firstPosition;
+            base.GoBack();
         }
     }
 

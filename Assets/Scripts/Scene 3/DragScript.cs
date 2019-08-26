@@ -23,8 +23,6 @@ public class DragScript : DraggableObject
     protected override void OnMouseDown()
     {
         base.OnMouseDown();
-
-        HoldingHand.Enable();
     }
 
     protected override void OnMouseUp()
@@ -57,8 +55,6 @@ public class DragScript : DraggableObject
         {
             base.GoBack();
         }
-
-        HoldingHand.Disable();
     }
 
     void OnTriggerEnter2D(Collider2D col)

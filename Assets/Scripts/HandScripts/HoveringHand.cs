@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Analytics;
+using UnityEngine.AI;
 
-public class HoldingHand : MonoBehaviour
+public class HoveringHand : MonoBehaviour
 {
     private Camera _mainCamera;
+
+    protected static GameObject _instance;
 
     // Start is called before the first frame update
     void Start()
@@ -14,7 +16,7 @@ public class HoldingHand : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         Vector3 mousePosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
         this.transform.position = new Vector3(mousePosition.x, mousePosition.y);
@@ -22,19 +24,23 @@ public class HoldingHand : MonoBehaviour
 
     public static void Enable()
     {
+        if (HoldingHand.Enabled) return;
+
         Cursor.visible = false;
 
-        GameObject thisObject = Finder.FindObjectByName("HoldingHand");
+        if (_instance == null) _instance = Finder.FindObjectByName(nameof(HoveringHand));
 
-        thisObject.SetActive(true);
+        _instance.SetActive(true);
     }
 
     public static void Disable()
     {
+        if (HoldingHand.Enabled) return;
+
         Cursor.visible = true;
 
-        GameObject thisObject = Finder.FindObjectByName("HoldingHand");
+        if (_instance == null) _instance = Finder.FindObjectByName(nameof(HoveringHand));
 
-        thisObject.SetActive(false);
+        _instance.SetActive(false);
     }
 }

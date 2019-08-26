@@ -2,48 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeterPerspectiveDrag : MonoBehaviour
+public class MeterPerspectiveDrag : DraggableObject
 {
-    private bool drag = false;
-
-    public GameObject HoldingHand;
-
-    void Start()
+    protected override void OnMouseEnter()
     {
-        drag = false;
+        PerspectiveHoveringHand.Enable();
     }
 
-    void OnMouseDown()
+    protected override void OnMouseExit()
     {
-        Cursor.visible = false;
-        HoldingHand.SetActive(true);
-
-        drag = true;
+        PerspectiveHoveringHand.Disable();
     }
 
-    void OnMouseDrag()
+    protected override void OnMouseDrag()
     {
-        if (drag)
+        if (base.IsDragging)
         {
-            Vector3 currentPos = Input.mousePosition;
-            currentPos.z = 10;
-            currentPos.x = currentPos.x + 0.5F;
+            Vector3 mousePosition = Input.mousePosition;
+
+            Vector3 currentPos = new Vector3(mousePosition.x + 0.5F, mousePosition.y, 10);
+
             Vector3 newPos = Camera.main.ScreenToWorldPoint(currentPos);
+
             this.transform.position = newPos;
-            HoldingHand.transform.position = new Vector3(newPos.x, newPos.y, -1);
         }
     }
-
-    void OnMouseUp()
-    {
-        Cursor.visible = true;
-        HoldingHand.SetActive(false);
-
-        drag = false;
-    }
-}
-
-public enum CursorMode
-{
-    Hold, Hover, None
 }

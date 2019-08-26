@@ -16,12 +16,20 @@ public class DraggableObject : MonoBehaviour
         _drag = false;
     }
 
+    protected bool IsDragging
+    {
+        get => _drag;
+    }
+
     protected virtual void OnMouseDown()
     {
         _drag = true;
+
+        HoveringHand.Disable();
+        HoldingHand.Enable();
     }
 
-    void OnMouseDrag()
+    protected virtual void OnMouseDrag()
     {
         if (_drag)
         {
@@ -33,6 +41,19 @@ public class DraggableObject : MonoBehaviour
     protected virtual void OnMouseUp()
     {
         _drag = false;
+
+        HoldingHand.Disable();
+        HoveringHand.Enable();
+    }
+
+    protected virtual void OnMouseEnter()
+    {
+        HoveringHand.Enable();
+    }
+
+    protected virtual void OnMouseExit()
+    {
+        HoveringHand.Disable();
     }
 
     protected void GoBack()
