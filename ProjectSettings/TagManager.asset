@@ -9,6 +9,8 @@ TagManager:
   - 8cm
   - 6cm
   - 10cm
+  - Hover
+  - Hold
   layers:
   - Default
   - TransparentFX

@@ -62,14 +62,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ColliderObject.cs" />
-    <Compile Include="Assets\Scripts\DragandDrop.cs" />
-    <Compile Include="Assets\Scripts\DraggableObject.cs" />
+    <Compile Include="Assets\Scripts\DragandDrop\ColliderObject.cs" />
+    <Compile Include="Assets\Scripts\DragandDrop\DragandDrop.cs" />
+    <Compile Include="Assets\Scripts\DragandDrop\DraggableObject.cs" />
+    <Compile Include="Assets\Scripts\DragandDrop\HoveringDraggableObject.cs" />
+    <Compile Include="Assets\Scripts\Enums\HandTags.cs" />
     <Compile Include="Assets\Scripts\Enums\PanelTag.cs" />
     <Compile Include="Assets\Scripts\Extensions\StringExtensions.cs" />
     <Compile Include="Assets\Scripts\FirstScene.cs" />
     <Compile Include="Assets\Scripts\HandScripts\HoldingHand.cs" />
     <Compile Include="Assets\Scripts\HandScripts\HoveringHand.cs" />
+    <Compile Include="Assets\Scripts\HandScripts\PerspectiveHoldingHand.cs" />
+    <Compile Include="Assets\Scripts\HandScripts\PerspectiveHoveringHand.cs" />
     <Compile Include="Assets\Scripts\Panels\Panel.cs" />
     <Compile Include="Assets\Scripts\Scene 10\RulerDrag.cs" />
     <Compile Include="Assets\Scripts\Scene 10\Table.cs" />
@@ -83,7 +87,6 @@
     <Compile Include="Assets\Scripts\Scene 15\ConverterScript.cs" />
     <Compile Include="Assets\Scripts\Scene 16\CutScript.cs" />
     <Compile Include="Assets\Scripts\Scene 16\MeterPerspectiveDrag.cs" />
-    <Compile Include="Assets\Scripts\Scene 16\PerspectiveHoveringHand.cs" />
     <Compile Include="Assets\Scripts\Scene 17\DrawCode.cs" />
     <Compile Include="Assets\Scripts\Scene 17\MeterDragScript.cs" />
     <Compile Include="Assets\Scripts\Scene 17\ModeScript.cs" />

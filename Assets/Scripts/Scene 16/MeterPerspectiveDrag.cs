@@ -2,18 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeterPerspectiveDrag : DraggableObject
+public class MeterPerspectiveDrag : HoveringDraggableObject
 {
-    protected override void OnMouseEnter()
-    {
-        PerspectiveHoveringHand.Enable();
-    }
-
-    protected override void OnMouseExit()
-    {
-        PerspectiveHoveringHand.Disable();
-    }
-
     protected override void OnMouseDrag()
     {
         if (base.IsDragging)
