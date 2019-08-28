@@ -1,45 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CheckScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private IEnumerable<ICheckable> objects;
+    private GameObject winningPanel, tryAgain;
+
+    void Awake()
     {
-        
+        objects = FindObjectsOfType<DragToBoxObject>().OfType<ICheckable>();
+
+        winningPanel = Finder.FindObjectByTag(PanelTag.Success);
+        tryAgain = Finder.FindObjectByTag(PanelTag.TryAgain);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public GameObject ruler;
-    public GameObject meter;
-    public GameObject compass;
-    public GameObject hammer;
-    public GameObject winningPanel;
-    public GameObject tryAgain;
-
-    bool firstCondition, secondCondition, thirdCondition, fourthCondition;
 
     public void Check()
     {
-        firstCondition = ruler.GetComponent<DragScript>().isinBox;
-        secondCondition = meter.GetComponent<DragScript>().isinBox;
-        thirdCondition = compass.GetComponent<DragScript>().isinBox;
-        fourthCondition = hammer.GetComponent<DragScript>().isinBox;
-
-        if (firstCondition && secondCondition && !thirdCondition && !fourthCondition)
-        {
-            winningPanel.SetActive(true);
-        }
-
-        else
+        if (objects.Any(checkable => !checkable.Check()))
         {
             tryAgain.SetActive(true);
+        }
+        else
+        {
+            winningPanel.SetActive(true);
         }
     }
 }

@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Table : DraggableObject
+public class Table : HoveringDraggableObject
 {
     public static string firstShelf, secondShelf, thirdShelf;
     private GameObject winPanel, tryAgain;
 
+    private Vector3 _firstCenter, _secondCenter, _thirdCenter;
+
     private string objectName;
 
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         winPanel = Finder.FindObjectByTag(PanelTag.Success);
         tryAgain = Finder.FindObjectByTag(PanelTag.TryAgain);
+        _firstCenter = GameObject.FindGameObjectWithTag(ShelfTag.First).GetComponent<Renderer>().bounds.center;
+        _secondCenter = GameObject.FindGameObjectWithTag(ShelfTag.Second).GetComponent<Renderer>().bounds.center;
+        _thirdCenter = GameObject.FindGameObjectWithTag(ShelfTag.Third).GetComponent<Renderer>().bounds.center;
     }
 
     protected override void Start()
@@ -48,19 +55,22 @@ public class Table : DraggableObject
 
         if (isInFirst(currentPosition.x, currentPosition.y) && firstShelf == null)
         {
+            this.transform.position = _firstCenter;
+
             firstShelf = objectName;
         }
-
         else if (isInSecond(currentPosition.x, currentPosition.y) && secondShelf == null)
         {
+            this.transform.position = _secondCenter;
+
             secondShelf = objectName;
         }
-
         else if (isInThird(currentPosition.x, currentPosition.y) && thirdShelf == null)
         {
+            this.transform.position = _thirdCenter;
+
             thirdShelf = objectName;
         }
-
         else
         {
             FindAndSetNull(objectName);

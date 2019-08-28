@@ -62,21 +62,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Buttons\BackButton.cs" />
+    <Compile Include="Assets\Scripts\Buttons\ForwardButton.cs" />
+    <Compile Include="Assets\Scripts\Buttons\GameButton.cs" />
     <Compile Include="Assets\Scripts\DragandDrop\ColliderObject.cs" />
     <Compile Include="Assets\Scripts\DragandDrop\DragandDrop.cs" />
     <Compile Include="Assets\Scripts\DragandDrop\DraggableObject.cs" />
     <Compile Include="Assets\Scripts\DragandDrop\HoveringDraggableObject.cs" />
     <Compile Include="Assets\Scripts\Enums\HandTags.cs" />
     <Compile Include="Assets\Scripts\Enums\PanelTag.cs" />
+    <Compile Include="Assets\Scripts\Enums\ShelfTag.cs" />
     <Compile Include="Assets\Scripts\Extensions\StringExtensions.cs" />
     <Compile Include="Assets\Scripts\FirstScene.cs" />
+    <Compile Include="Assets\Scripts\Globals\Globals.cs" />
     <Compile Include="Assets\Scripts\HandScripts\HoldingHand.cs" />
     <Compile Include="Assets\Scripts\HandScripts\HoveringHand.cs" />
     <Compile Include="Assets\Scripts\HandScripts\PerspectiveHoldingHand.cs" />
     <Compile Include="Assets\Scripts\HandScripts\PerspectiveHoveringHand.cs" />
     <Compile Include="Assets\Scripts\Panels\Panel.cs" />
-    <Compile Include="Assets\Scripts\Scene 10\RulerDrag.cs" />
     <Compile Include="Assets\Scripts\Scene 10\Table.cs" />
+    <Compile Include="Assets\Scripts\Scene 10\TableRuler.cs" />
     <Compile Include="Assets\Scripts\Scene 11\GenerateScript.cs" />
     <Compile Include="Assets\Scripts\Scene 11\Tag.cs" />
     <Compile Include="Assets\Scripts\Scene 11\TagScript.cs" />
@@ -91,8 +96,15 @@
     <Compile Include="Assets\Scripts\Scene 17\MeterDragScript.cs" />
     <Compile Include="Assets\Scripts\Scene 17\ModeScript.cs" />
     <Compile Include="Assets\Scripts\Scene 17\PencilScript.cs" />
+    <Compile Include="Assets\Scripts\Scene 2\SecondSceneNextButton.cs" />
+    <Compile Include="Assets\Scripts\Scene 3\BoxSceneForwardButton.cs" />
     <Compile Include="Assets\Scripts\Scene 3\CheckScript.cs" />
-    <Compile Include="Assets\Scripts\Scene 3\DragScript.cs" />
+    <Compile Include="Assets\Scripts\Scene 3\Compass.cs" />
+    <Compile Include="Assets\Scripts\Scene 3\DragToBoxObject.cs" />
+    <Compile Include="Assets\Scripts\Scene 3\Hammer.cs" />
+    <Compile Include="Assets\Scripts\Scene 3\ICheckable.cs" />
+    <Compile Include="Assets\Scripts\Scene 3\Meter.cs" />
+    <Compile Include="Assets\Scripts\Scene 3\Ruler.cs" />
     <Compile Include="Assets\Scripts\Scene 5\CarScript.cs" />
     <Compile Include="Assets\Scripts\Scene 6\Scene6Animation.cs" />
     <Compile Include="Assets\Scripts\Scene 7\InputsCheckScript.cs" />

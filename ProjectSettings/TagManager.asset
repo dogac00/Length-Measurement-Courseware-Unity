@@ -11,6 +11,9 @@ TagManager:
   - 10cm
   - Hover
   - Hold
+  - FirstShelf
+  - SecondShelf
+  - ThirdShelf
   layers:
   - Default
   - TransparentFX

@@ -10,10 +10,4 @@ public static class Finder
         return Resources.FindObjectsOfTypeAll<GameObject>()
                         .FirstOrDefault(go => go.tag == tag);
     }
-
-    public static GameObject FindObjectByName(string name)
-    {
-        return Resources.FindObjectsOfTypeAll<GameObject>()
-                        .FirstOrDefault(go => go.name == name);
-    }
 }

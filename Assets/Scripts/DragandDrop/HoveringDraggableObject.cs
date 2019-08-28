@@ -6,7 +6,7 @@ public class HoveringDraggableObject : DraggableObject
 {
     private GameObject _hover, _hold;
 
-    void Awake()
+    protected virtual void Awake()
     {
         _hover = Finder.FindObjectByTag(HandTags.Hover);
         _hold = Finder.FindObjectByTag(HandTags.Hold);
@@ -15,6 +15,8 @@ public class HoveringDraggableObject : DraggableObject
     protected override void OnMouseDown()
     {
         base.OnMouseDown();
+
+        if (Globals.PanelMode) return;
 
         if (!_hold.activeSelf)
         {
@@ -30,6 +32,8 @@ public class HoveringDraggableObject : DraggableObject
     {
         base.OnMouseUp();
 
+        if (Globals.PanelMode) return;
+
         _hold.SetActive(false);
 
         Cursor.visible = false;
@@ -39,6 +43,8 @@ public class HoveringDraggableObject : DraggableObject
 
     protected virtual void OnMouseEnter()
     {
+        if (Globals.PanelMode) return;
+
         if (_hold.activeSelf) return;
 
         Cursor.visible = false;
@@ -48,6 +54,8 @@ public class HoveringDraggableObject : DraggableObject
 
     protected virtual void OnMouseExit()
     {
+        if (Globals.PanelMode) return;
+
         if (_hold.activeSelf) return;
 
         Cursor.visible = true;
