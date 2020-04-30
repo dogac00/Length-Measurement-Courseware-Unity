@@ -1168,9 +1168,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Seninle Beraber Alttakine Benzer Bir Masa \xD6l\xE7ece\u011Fiz.\nM\xFC\u015Fterimizin
-    \u0130stedi\u011Fi \xD6l\xE7\xFClerde Bir Masa Olmas\u0131 Gerekiyor.\nBunun \u0130\xE7in
-    Uzunluk \xD6l\xE7\xFCm\xFC Yapaca\u011F\u0131z :)"
+  m_Text: "Seninle beraber alttakine benzer bir masa \xF6l\xE7ece\u011Fiz.\nM\xFC\u015Fterimizin
+    istedi\u011Fi \xF6l\xE7\xFClerde bir masa olmas\u0131 gerekiyor.\nBunun i\xE7in
+    uzunluk \xF6l\xE7\xFCm\xFC yapaca\u011F\u0131z :)"
 --- !u!222 &1002134028
 CanvasRenderer:
   m_ObjectHideFlags: 0

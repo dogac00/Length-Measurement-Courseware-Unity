@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Tag : DraggableObject
+public class Tag : Draggable
 {
     private bool _inCollider;
     private string _tag;
@@ -35,10 +35,8 @@ public class Tag : DraggableObject
         if (_tag == collider.tag) Count--;
     }
 
-    protected override void OnMouseUp()
+    protected void OnMouseUp()
     {
-        base.OnMouseUp();
-
         if (_inCollider)
         {
             if (_collider.GetComponent<ColliderObject>().IsFull)

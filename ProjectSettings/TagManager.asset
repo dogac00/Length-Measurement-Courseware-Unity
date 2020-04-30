@@ -66,3 +66,6 @@ TagManager:
   - name: Canvas Objects
     uniqueID: 354907441
     locked: 0
+  - name: Fading
+    uniqueID: 419500275
+    locked: 0

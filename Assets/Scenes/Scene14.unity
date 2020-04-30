@@ -1068,9 +1068,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u015Eimdi ise Elimizde \u0130ki Adet Sandalye Var. Bu Sandalyeleri \xD6l\xE7memiz
-    Gerekiyor. Metreyi S\xFCr\xFCkleyerek \xD6l\xE7\xFCm Yapabilirsin. Sa\u011Fdaki
-    Metreyi D\xF6nd\xFCr Butonlar\u0131 Sana Yard\u0131mc\u0131 Olabilir."
+  m_Text: "\u015Eimdi ise elimizde iki adet sandalye var. Bu sandalyeleri \xF6l\xE7memiz
+    gerekiyor. Metreyi s\xFCr\xFCkleyerek \xF6l\xE7\xFCm yapabilirsin. Sa\u011Fdaki
+    metreyi d\xF6nd\xFCr butonlar\u0131 sana yard\u0131mc\u0131 olabilir."
 --- !u!222 &375694315
 CanvasRenderer:
   m_ObjectHideFlags: 0

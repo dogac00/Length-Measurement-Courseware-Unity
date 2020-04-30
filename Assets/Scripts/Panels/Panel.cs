@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Panel : MonoBehaviour
+public class Panel : MonoBehaviour, IPanel
 {
-    protected virtual void OnDisable()
+    public virtual void OnDisable()
     {
         Globals.PanelMode = false;
     }
 
-    protected virtual void OnEnable()
+    public virtual void OnEnable()
     {
         Globals.PanelMode = true;
 

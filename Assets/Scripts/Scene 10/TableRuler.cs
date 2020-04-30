@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TableRuler : HoveringDraggableObject
+public class TableRuler : HoveringDraggable
 {
     protected override void OnMouseUp()
     {

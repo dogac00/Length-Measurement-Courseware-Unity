@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Table : HoveringDraggableObject
+public class Table : HoveringDraggable
 {
     public static string firstShelf, secondShelf, thirdShelf;
     private GameObject winPanel, tryAgain;
@@ -17,9 +17,9 @@ public class Table : HoveringDraggableObject
 
         winPanel = Finder.FindObjectByTag(PanelTag.Success);
         tryAgain = Finder.FindObjectByTag(PanelTag.TryAgain);
-        _firstCenter = GameObject.FindGameObjectWithTag(ShelfTag.First).GetComponent<Renderer>().bounds.center;
-        _secondCenter = GameObject.FindGameObjectWithTag(ShelfTag.Second).GetComponent<Renderer>().bounds.center;
-        _thirdCenter = GameObject.FindGameObjectWithTag(ShelfTag.Third).GetComponent<Renderer>().bounds.center;
+        _firstCenter = GameObject.FindGameObjectWithTag(ShelfTag.First).transform.position;
+        _secondCenter = GameObject.FindGameObjectWithTag(ShelfTag.Second).transform.position;
+        _thirdCenter = GameObject.FindGameObjectWithTag(ShelfTag.Third).transform.position;
     }
 
     protected override void Start()

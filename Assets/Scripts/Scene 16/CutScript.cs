@@ -20,6 +20,7 @@ public class CutScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Saw.gameObject.transform.GetChild(0).GetComponent<Animator>().enabled = false;
         zoomedIn = false;
         isZooming = false;
         SetBodyAnimations(false);
@@ -212,6 +213,7 @@ public class CutScript : MonoBehaviour
             TrueNumber++;
             SetBackAnimations(true);
             PlayBackAnimations();
+            PlaySawAnimation();
             CloseFirst.SetActive(false);
             FirstOkay.SetActive(true);
             FirstButton.SetActive(false);
@@ -231,6 +233,7 @@ public class CutScript : MonoBehaviour
             TrueNumber++;
             SetBodyAnimations(true);
             PlayBodyAnimations();
+            PlaySawAnimation();
             CloseSecond.SetActive(false);
             SecondOkay.SetActive(true);
             SecondButton.SetActive(false);
@@ -250,6 +253,7 @@ public class CutScript : MonoBehaviour
             TrueNumber++;
             SetLegAnimations(true);
             PlayLegAnimations();
+            PlaySawAnimation();
             CloseThird.SetActive(false);
             ThirdOkay.SetActive(true);
             ThirdButton.SetActive(false);
@@ -260,6 +264,17 @@ public class CutScript : MonoBehaviour
         {
             WrongPlacePanel.SetActive(true);
         }
+    }
+
+    private void PlaySawAnimation()
+    {
+        var animator = Saw.gameObject.transform.GetChild(0).GetComponent<Animator>();
+
+        animator.enabled = true;
+
+        animator.Play("Scene16SawAnimation");
+
+        this.RunAfter(3000, () => { animator.enabled = false; });
     }
 
     public void ZoomToFirst()

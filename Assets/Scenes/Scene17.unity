@@ -2163,10 +2163,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Bir Masa G\xF6vdesi \xD6l\xE7memiz Gerekiyor. \u0130stenen \xD6l\xE7\xFCmlere
-    Sa\u011Fdan \xD6l\xE7\xFCler Diyerek Ula\u015Fabilirsin. \xD6l\xE7meye Sol Alttan
-    Ba\u015Flamal\u0131s\u0131n. \u0130\u015Faretledi\u011Fin Yerler de Sol veya Alt
-    K\u0131s\u0131mda Olmal\u0131. Yard\u0131mdan Men\xFCs\xFCne G\xF6z At."
+  m_Text: "Bir masa g\xF6vdesi \xF6l\xE7memiz gerekiyor. \u0130stenen \xF6l\xE7\xFCmlere
+    sa\u011Fdan \xF6l\xE7\xFCler diyerek ula\u015Fabilirsin. \xD6l\xE7meye sol alttan
+    ba\u015Flamal\u0131s\u0131n. \u0130\u015Faretledi\u011Fin yerler de sol veya alt
+    k\u0131s\u0131mda olmal\u0131. Yard\u0131mdan men\xFCs\xFCne g\xF6z at."
 --- !u!222 &711486512
 CanvasRenderer:
   m_ObjectHideFlags: 0
