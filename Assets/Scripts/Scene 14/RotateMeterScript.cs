@@ -1,28 +1,62 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RotateMeterScript : MonoBehaviour
 {
-    public void Rotate()
-    {
-        float curZ = this.transform.eulerAngles.z;
+    public GameObject left, right;
+    public GameObject rotateIcon;
 
-        if (curZ % 90 == 0)
+    void Start()
+    {
+        rotateIcon.AddComponent(typeof(EventTrigger));
+        EventTrigger trigger = rotateIcon.GetComponent<EventTrigger>();
+        var entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.Drag;
+        entry.callback.AddListener((eventData) =>
         {
-            StartCoroutine(RotateCoroutine(curZ - 90));
+            RotateWithMouse();
+        });
+        trigger.triggers.Add(entry);
+    }
+
+    void Update()
+    {
+        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        bool isClose = mousePos.IsClose(left.transform.position, 2) ||
+                           mousePos.IsClose(right.transform.position, 2);
+
+        if (isClose)
+        {
+            Cursor.visible = false;
+
+            rotateIcon.SetActive(true);
+
+            rotateIcon.transform.position = new Vector3(mousePos.x, mousePos.y);
+        }
+        else
+        {
+            Cursor.visible = true;
+
+            rotateIcon.SetActive(false);
+        }
+
+        if (isClose && Input.GetMouseButtonDown(0))
+        {
+            RotateWithMouse();
         }
     }
 
-    IEnumerator RotateCoroutine(float targetZ)
+    private void RotateWithMouse()
     {
-        float curZ = this.transform.eulerAngles.z;
+        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        while (curZ > targetZ)
-        {
-            curZ -= 3;
-            this.transform.eulerAngles = new Vector3(0, 0, curZ);
-            yield return new WaitForSeconds(0.02F);
-        }
+        var difference = mousePos - this.transform.position;
+
+        difference.Normalize();
+
+        var degreeZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+
+        this.transform.rotation = Quaternion.Euler(0, 0, degreeZ);
     }
 }

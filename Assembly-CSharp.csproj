@@ -77,6 +77,8 @@
     <Compile Include="Assets\Scripts\Extensions\CoroutineExtensions.cs" />
     <Compile Include="Assets\Scripts\Extensions\GameObjectExtensions.cs" />
     <Compile Include="Assets\Scripts\Extensions\StringExtensions.cs" />
+    <Compile Include="Assets\Scripts\Extensions\Vector3Extensions.cs" />
+    <Compile Include="Assets\Scripts\GenericDraggable.cs" />
     <Compile Include="Assets\Scripts\Globals\Globals.cs" />
     <Compile Include="Assets\Scripts\HandScripts\HoldingHand.cs" />
     <Compile Include="Assets\Scripts\HandScripts\HoveringHand.cs" />
@@ -86,8 +88,10 @@
     <Compile Include="Assets\Scripts\Panels\Panel.cs" />
     <Compile Include="Assets\Scripts\Panels\SuccessPanel.cs" />
     <Compile Include="Assets\Scripts\Panels\TryAgainPanel.cs" />
+    <Compile Include="Assets\Scripts\RotationScript.cs" />
     <Compile Include="Assets\Scripts\Scene 10\Table.cs" />
     <Compile Include="Assets\Scripts\Scene 10\TableRuler.cs" />
+    <Compile Include="Assets\Scripts\Scene 11\DestroyAnimator.cs" />
     <Compile Include="Assets\Scripts\Scene 11\GenerateScript.cs" />
     <Compile Include="Assets\Scripts\Scene 11\Tag.cs" />
     <Compile Include="Assets\Scripts\Scene 11\TagScript.cs" />
@@ -96,12 +100,16 @@
     <Compile Include="Assets\Scripts\Scene 14\RotateMeterScript.cs" />
     <Compile Include="Assets\Scripts\Scene 15\CheckConversionsScript.cs" />
     <Compile Include="Assets\Scripts\Scene 15\ConverterScript.cs" />
+    <Compile Include="Assets\Scripts\Scene 15\SecondSceneScript.cs" />
     <Compile Include="Assets\Scripts\Scene 16\CutScript.cs" />
     <Compile Include="Assets\Scripts\Scene 16\MeterPerspectiveDrag.cs" />
     <Compile Include="Assets\Scripts\Scene 17\DrawCode.cs" />
+    <Compile Include="Assets\Scripts\Scene 17\LineDrawer.cs" />
     <Compile Include="Assets\Scripts\Scene 17\MeterDragScript.cs" />
     <Compile Include="Assets\Scripts\Scene 17\ModeScript.cs" />
     <Compile Include="Assets\Scripts\Scene 17\PencilScript.cs" />
+    <Compile Include="Assets\Scripts\Scene 17\RotationIconScript.cs" />
+    <Compile Include="Assets\Scripts\Scene 17\TurnMeterScript.cs" />
     <Compile Include="Assets\Scripts\Scene 2\SecondSceneNextButton.cs" />
     <Compile Include="Assets\Scripts\Scene 3\BoxSceneForwardButton.cs" />
     <Compile Include="Assets\Scripts\Scene 3\CheckScript.cs" />
@@ -124,6 +132,7 @@
     <Compile Include="Assets\Scripts\Utility\DestroySelf.cs" />
     <Compile Include="Assets\Scripts\Utility\Fader.cs" />
     <Compile Include="Assets\Scripts\Utility\Finder.cs" />
+    <Compile Include="Assets\Scripts\Utility\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Utility\TypeWriter.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

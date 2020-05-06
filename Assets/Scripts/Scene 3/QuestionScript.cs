@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class QuestionScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class QuestionScript : MonoBehaviour
 {
+    private static int counter;
+
     public string HelpText;
 
     private static GameObject _descrPanel;
@@ -15,20 +14,23 @@ public class QuestionScript : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         _descrPanel = Finder.FindObjectByName("DescrPanel", false);
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    void OnMouseOver()
     {
         var pos = this.transform.position;
 
         OpenPanel(new Vector3(pos.x + 2, pos.y - 2));
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    void OnMouseExit()
     {
         _descrPanel.SetActive(false);
     }
 
     private void OpenPanel(Vector3 position)
     {
+        if (_descrPanel.activeSelf)
+            return;
+
         _descrPanel.transform.position = position;
 
         var textChild = _descrPanel.GetChildNamed("Text");

@@ -18,7 +18,6 @@ public class Draggable : MonoBehaviour
     {
         Vector3 currentPos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
         this.transform.position = new Vector3(currentPos.x + 0.4F, currentPos.y, 0);
-        print(this.transform.position);
     }
 
     protected void GoBack()

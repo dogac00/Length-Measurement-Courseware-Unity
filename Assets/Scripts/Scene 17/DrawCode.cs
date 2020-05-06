@@ -25,6 +25,9 @@ public class DrawCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ModeScript.rotationMode)
+            return;
+
         pencilPosition = Pencil.transform.position;
 
         if (Input.GetMouseButtonDown(0))

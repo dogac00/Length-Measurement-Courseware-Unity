@@ -7,11 +7,13 @@ public static class CoroutineExtensions
 {
     public static void RunAfter(this MonoBehaviour behavior, int milliseconds, Action action)
     {
-        behavior.StartCoroutine(Move());
+        behavior.StartCoroutine(Routine());
 
-        IEnumerator Move()
+        IEnumerator Routine()
         {
             yield return new WaitForSeconds(milliseconds / 1000F);
+
+            action();
         }
     }
 }

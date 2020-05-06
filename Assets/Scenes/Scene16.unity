@@ -233,8 +233,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -58.09, y: -22.4}
-  m_SizeDelta: {x: 643.07, y: 91.6}
+  m_AnchoredPosition: {x: -45.1, y: -15}
+  m_SizeDelta: {x: 656.9, y: 112.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15925732
 MonoBehaviour:
@@ -258,7 +258,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 18
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
@@ -271,8 +271,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Bizden istenen \xF6l\xE7\xFClerde e\u015Fyalar\u0131 yapmam\u0131z gerekiyor.
     \xD6nce sandalye yaparak ba\u015Flayaca\u011F\u0131z. istenen \xF6l\xE7\xFClere
-    g\xF6re alttaki sandalye par\xE7alar\u0131n\u0131 testere ile kesmelisin. Par\xE7alardan
-    hangi par\xE7an\u0131n hangisi oldu\u011Funa bakabilirsin."
+    g\xF6re alttaki sandalye par\xE7alar\u0131n\u0131 testere ile kesmelisin. Sa\u011Fdaki
+    butonlardan uzunluklara bak\u0131p kesmelisin. Kes butonu ile kesilir."
 --- !u!222 &15925733
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3437,7 +3437,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Scene17
+          m_StringArgument: Scene17Intro
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

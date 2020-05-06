@@ -10,5 +10,6 @@ public class Clickable : MonoBehaviour
     void OnMouseDown()
     {
         OnClick.Invoke();
+
     }
 }

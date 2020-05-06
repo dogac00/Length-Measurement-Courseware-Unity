@@ -8,6 +8,7 @@ public class ModeScript : MonoBehaviour
     public static bool isInDragMode;
     public static bool isInDrawMode;
     public static bool isInPanelMode;
+    public static bool rotationMode;
 
     public GameObject drawButton, dragButton;
     public GameObject drawObject, dragObject;
@@ -46,6 +47,11 @@ public class ModeScript : MonoBehaviour
 
     public void DragModeClick()
     {
+        print(rotationMode);
+
+        if (rotationMode)
+            return;
+
         if (!isInDragMode)
         {
             drawButton.GetComponent<Image>().sprite = drawButtonInactive;
@@ -57,9 +63,13 @@ public class ModeScript : MonoBehaviour
 
     public void DrawModeClick()
     {
+        print(rotationMode);
+
+        if (rotationMode)
+            return;
+
         if (!isInDrawMode)
         {
-
             drawButton.GetComponent<Image>().sprite = drawButtonActive;
             dragButton.GetComponent<Image>().sprite = dragButtonInactive;
 

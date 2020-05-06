@@ -471,7 +471,6 @@ GameObject:
   - component: {fileID: 560331250}
   - component: {fileID: 560331253}
   - component: {fileID: 560331252}
-  - component: {fileID: 560331251}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -498,25 +497,6 @@ RectTransform:
   m_AnchoredPosition: {x: 34.9, y: -20.7}
   m_SizeDelta: {x: 644.7, y: 90.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &560331251
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560331249}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 87cf169bbb9b98c498540d0435b48ca0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &560331252
 MonoBehaviour:
   m_ObjectHideFlags: 0
